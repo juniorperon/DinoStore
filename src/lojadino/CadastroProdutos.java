@@ -58,86 +58,91 @@ public class CadastroProdutos extends javax.swing.JFrame {
         jLabel11 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Cadastro");
         setBackground(getBackground());
+        setFocusTraversalPolicyProvider(true);
+        setUndecorated(true);
+        setResizable(false);
 
+        jPanel1.setToolTipText("Cadastro");
         jPanel1.setLayout(null);
 
-        jLabel7.setFont(new java.awt.Font("Impact", 0, 12)); // NOI18N
+        jLabel7.setFont(new java.awt.Font("Impact", 0, 18)); // NOI18N
         jLabel7.setText("Alimentação");
         jPanel1.add(jLabel7);
-        jLabel7.setBounds(490, 110, 70, 20);
+        jLabel7.setBounds(490, 140, 100, 20);
         jPanel1.add(jTextField5);
-        jTextField5.setBounds(490, 140, 150, 20);
+        jTextField5.setBounds(490, 170, 150, 20);
 
-        jLabel8.setFont(new java.awt.Font("Impact", 0, 12)); // NOI18N
+        jLabel8.setFont(new java.awt.Font("Impact", 0, 18)); // NOI18N
         jLabel8.setText("Comprimento");
         jPanel1.add(jLabel8);
-        jLabel8.setBounds(490, 170, 80, 20);
+        jLabel8.setBounds(490, 200, 100, 20);
         jPanel1.add(jTextField6);
-        jTextField6.setBounds(490, 200, 150, 20);
+        jTextField6.setBounds(490, 230, 150, 20);
 
-        jLabel9.setFont(new java.awt.Font("Impact", 0, 12)); // NOI18N
+        jLabel9.setFont(new java.awt.Font("Impact", 0, 18)); // NOI18N
         jLabel9.setText("Altura");
         jPanel1.add(jLabel9);
-        jLabel9.setBounds(490, 240, 120, 20);
+        jLabel9.setBounds(490, 270, 120, 20);
         jPanel1.add(jTextField7);
-        jTextField7.setBounds(490, 270, 150, 20);
+        jTextField7.setBounds(490, 300, 150, 20);
 
-        jLabel10.setFont(new java.awt.Font("Impact", 0, 12)); // NOI18N
+        jLabel10.setFont(new java.awt.Font("Impact", 0, 18)); // NOI18N
         jLabel10.setText("Peso");
         jPanel1.add(jLabel10);
-        jLabel10.setBounds(490, 300, 90, 20);
+        jLabel10.setBounds(490, 330, 90, 20);
         jPanel1.add(jTextField8);
-        jTextField8.setBounds(490, 330, 150, 20);
+        jTextField8.setBounds(490, 360, 150, 20);
 
         jLabel2.setFont(new java.awt.Font("Impact", 1, 36)); // NOI18N
         jLabel2.setText("Cadastro de Dinossauros");
         jPanel1.add(jLabel2);
-        jLabel2.setBounds(170, 30, 420, 50);
+        jLabel2.setBounds(170, 60, 420, 50);
 
-        jLabel3.setFont(new java.awt.Font("Impact", 0, 12)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Impact", 0, 18)); // NOI18N
         jLabel3.setText("Nome");
         jPanel1.add(jLabel3);
-        jLabel3.setBounds(170, 110, 40, 20);
+        jLabel3.setBounds(170, 140, 100, 20);
         jPanel1.add(jTextField1);
-        jTextField1.setBounds(170, 140, 150, 20);
+        jTextField1.setBounds(170, 170, 150, 20);
         jPanel1.add(jTextField2);
-        jTextField2.setBounds(170, 200, 150, 20);
+        jTextField2.setBounds(170, 230, 150, 20);
 
-        jLabel4.setFont(new java.awt.Font("Impact", 0, 12)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Impact", 0, 18)); // NOI18N
         jLabel4.setText("Especie");
         jPanel1.add(jLabel4);
-        jLabel4.setBounds(170, 170, 50, 20);
+        jLabel4.setBounds(170, 200, 110, 20);
         jPanel1.add(jTextField3);
-        jTextField3.setBounds(170, 270, 150, 20);
+        jTextField3.setBounds(170, 300, 150, 20);
 
-        jLabel5.setFont(new java.awt.Font("Impact", 0, 12)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Impact", 0, 18)); // NOI18N
         jLabel5.setText("Data de Nascimento");
         jPanel1.add(jLabel5);
-        jLabel5.setBounds(170, 240, 120, 20);
+        jLabel5.setBounds(170, 270, 120, 20);
 
-        jLabel6.setFont(new java.awt.Font("Impact", 0, 12)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Impact", 0, 18)); // NOI18N
         jLabel6.setText("Nacionalidade");
         jPanel1.add(jLabel6);
-        jLabel6.setBounds(170, 300, 90, 20);
+        jLabel6.setBounds(170, 330, 120, 20);
         jPanel1.add(jTextField4);
-        jTextField4.setBounds(170, 330, 150, 20);
+        jTextField4.setBounds(170, 360, 150, 20);
 
-        jButton1.setText("jButton1");
+        jButton1.setText("Salvar");
         jPanel1.add(jButton1);
-        jButton1.setBounds(210, 390, 73, 23);
+        jButton1.setBounds(183, 420, 120, 23);
 
-        jButton2.setText("jButton2");
+        jButton2.setText("Finalizar");
         jPanel1.add(jButton2);
-        jButton2.setBounds(530, 390, 73, 23);
+        jButton2.setBounds(520, 420, 110, 23);
 
         jRadioButton1.setText("Macho");
         jPanel1.add(jRadioButton1);
-        jRadioButton1.setBounds(610, 20, 70, 23);
+        jRadioButton1.setBounds(610, 50, 70, 23);
 
         jRadioButton2.setText("Femea");
         jPanel1.add(jRadioButton2);
-        jRadioButton2.setBounds(610, 60, 70, 23);
+        jRadioButton2.setBounds(610, 90, 70, 23);
 
         jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/lojadino/background1.jpg"))); // NOI18N
         jPanel1.add(jLabel11);

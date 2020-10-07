@@ -71,32 +71,30 @@ public class Login extends javax.swing.JFrame {
         getContentPane().add(jLabel2);
         jLabel2.setBounds(180, 10, 320, 40);
 
-        jLabel3.setFont(new java.awt.Font("Tempus Sans ITC", 1, 14)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Tempus Sans ITC", 1, 18)); // NOI18N
         jLabel3.setText("Login");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(200, 100, 40, 20);
+        jLabel3.setBounds(200, 100, 70, 20);
 
-        jTextField1.setText("jTextField1");
         jTextField1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         getContentPane().add(jTextField1);
         jTextField1.setBounds(200, 120, 240, 30);
 
-        jLabel4.setFont(new java.awt.Font("Tempus Sans ITC", 1, 14)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Tempus Sans ITC", 1, 18)); // NOI18N
         jLabel4.setText("Senha");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(200, 180, 50, 19);
+        jLabel4.setBounds(200, 180, 50, 25);
 
-        jTextField2.setText("jTextField2");
         jTextField2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         getContentPane().add(jTextField2);
         jTextField2.setBounds(200, 200, 240, 30);
 
-        jButton1.setText("jButton1");
+        jButton1.setText("Logar");
         jButton1.setBorder(null);
         getContentPane().add(jButton1);
         jButton1.setBounds(210, 270, 90, 30);
 
-        jButton2.setText("jButton2");
+        jButton2.setText("Cadastrar");
         getContentPane().add(jButton2);
         jButton2.setBounds(340, 270, 90, 30);
 
@@ -149,7 +147,7 @@ public class Login extends javax.swing.JFrame {
         jLabel19.setBounds(30, 270, 12, 33);
 
         getContentPane().add(jPanel2);
-        jPanel2.setBounds(619, 0, 80, 359);
+        jPanel2.setBounds(620, 0, 80, 359);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/lojadino/background1.jpg"))); // NOI18N
         getContentPane().add(jLabel1);
