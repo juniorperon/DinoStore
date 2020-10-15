@@ -63,7 +63,10 @@ public class Carregamento extends javax.swing.JFrame {
         barra.setBackground(new java.awt.Color(255, 255, 255));
         barra.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         barra.setForeground(new java.awt.Color(0, 0, 0));
+        barra.setMaximum(101);
         barra.setToolTipText("0");
+        barra.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        barra.setBorderPainted(false);
         barra.setStringPainted(true);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
