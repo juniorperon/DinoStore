@@ -55,6 +55,7 @@ public class Carregamento extends javax.swing.JFrame {
         barra = new javax.swing.JProgressBar();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/lojadino/logo_facens.png"))); // NOI18N
         jLabel1.setText("jLabel1");
