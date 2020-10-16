@@ -66,7 +66,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/lojadino/Imagens/icone-dinossauro.png"))); // NOI18N
         jButton1.setToolTipText("Dinossauros");
-        jButton1.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED));
+        jButton1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -78,14 +78,14 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jButton2.setBackground(new java.awt.Color(255, 255, 255));
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/lojadino/Imagens/cadPacientes.png"))); // NOI18N
         jButton2.setToolTipText("Clientes");
-        jButton2.setBorder(null);
+        jButton2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
         painelinterno.add(jButton2);
-        jButton2.setBounds(30, 70, 80, 70);
+        jButton2.setBounds(20, 70, 90, 70);
 
         telafundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/lojadino/Imagens/internalframe.png"))); // NOI18N
         telafundo.setText("jLabel1");
