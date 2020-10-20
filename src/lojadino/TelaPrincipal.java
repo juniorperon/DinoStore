@@ -37,16 +37,17 @@ public class TelaPrincipal extends javax.swing.JFrame {
         btexit = new javax.swing.JButton();
         fundoLogin = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
-        jMenu1 = new javax.swing.JMenu();
+        mncadastrar = new javax.swing.JMenu();
         btclientes = new javax.swing.JMenuItem();
         btprodutos = new javax.swing.JMenuItem();
-        jMenu2 = new javax.swing.JMenu();
-        jMenu3 = new javax.swing.JMenu();
+        mdvender = new javax.swing.JMenu();
+        mnferramentas = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
-        btsair = new javax.swing.JMenu();
+        mnsair = new javax.swing.JMenu();
         btSair = new javax.swing.JMenuItem();
+        btrelogar = new javax.swing.JMenuItem();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Sistema de Gerenciamento");
         setResizable(false);
         getContentPane().setLayout(null);
@@ -65,9 +66,10 @@ public class TelaPrincipal extends javax.swing.JFrame {
         painelinterno.add(jLabel2);
         jLabel2.setBounds(30, 20, 100, 20);
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/lojadino/Imagens/icone-dinossauro.png"))); // NOI18N
+        jButton1.setBackground(new java.awt.Color(255, 255, 255));
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/lojadino/Imagens/stegosaurus.png"))); // NOI18N
         jButton1.setToolTipText("Dinossauros");
-        jButton1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jButton1.setBorder(new javax.swing.border.MatteBorder(null));
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -77,9 +79,9 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jButton1.setBounds(130, 70, 90, 70);
 
         jButton2.setBackground(new java.awt.Color(255, 255, 255));
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/lojadino/Imagens/cadPacientes.png"))); // NOI18N
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/lojadino/Imagens/cadastrar.png"))); // NOI18N
         jButton2.setToolTipText("Clientes");
-        jButton2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jButton2.setBorder(new javax.swing.border.MatteBorder(null));
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -102,9 +104,9 @@ public class TelaPrincipal extends javax.swing.JFrame {
         internalFrame.getContentPane().add(sistemagerenciamento);
         sistemagerenciamento.setBounds(10, 10, 280, 25);
 
-        btexit.setBackground(new java.awt.Color(255, 255, 255));
+        btexit.setBackground(new java.awt.Color(204, 204, 204));
         btexit.setForeground(new java.awt.Color(255, 255, 255));
-        btexit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/lojadino/Imagens/exit.png"))); // NOI18N
+        btexit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/lojadino/Imagens/close.png"))); // NOI18N
         btexit.setToolTipText("Fechar Tela Bem-Vindo");
         btexit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -121,41 +123,43 @@ public class TelaPrincipal extends javax.swing.JFrame {
         getContentPane().add(fundoLogin);
         fundoLogin.setBounds(0, 0, 1900, 1267);
 
-        jMenu1.setBackground(new java.awt.Color(255, 255, 255));
-        jMenu1.setForeground(new java.awt.Color(0, 0, 0));
-        jMenu1.setText("Cadastrar");
-        jMenu1.addActionListener(new java.awt.event.ActionListener() {
+        mncadastrar.setBackground(new java.awt.Color(255, 255, 255));
+        mncadastrar.setForeground(new java.awt.Color(0, 0, 0));
+        mncadastrar.setText("Cadastrar");
+        mncadastrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenu1ActionPerformed(evt);
+                mncadastrarActionPerformed(evt);
             }
         });
 
         btclientes.setForeground(new java.awt.Color(0, 0, 0));
+        btclientes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/lojadino/Imagens/cadastrar.png"))); // NOI18N
         btclientes.setText("Clientes");
         btclientes.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btclientesActionPerformed(evt);
             }
         });
-        jMenu1.add(btclientes);
+        mncadastrar.add(btclientes);
 
         btprodutos.setForeground(new java.awt.Color(0, 0, 0));
+        btprodutos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/lojadino/Imagens/stegosaurus.png"))); // NOI18N
         btprodutos.setText("Produtos");
         btprodutos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btprodutosActionPerformed(evt);
             }
         });
-        jMenu1.add(btprodutos);
+        mncadastrar.add(btprodutos);
 
-        jMenuBar1.add(jMenu1);
+        jMenuBar1.add(mncadastrar);
 
-        jMenu2.setForeground(new java.awt.Color(0, 0, 0));
-        jMenu2.setText("Vender");
-        jMenuBar1.add(jMenu2);
+        mdvender.setForeground(new java.awt.Color(0, 0, 0));
+        mdvender.setText("Vender");
+        jMenuBar1.add(mdvender);
 
-        jMenu3.setForeground(new java.awt.Color(0, 0, 0));
-        jMenu3.setText("Ferramentas");
+        mnferramentas.setForeground(new java.awt.Color(0, 0, 0));
+        mnferramentas.setText("Ferramentas");
 
         jMenuItem1.setForeground(new java.awt.Color(0, 0, 0));
         jMenuItem1.setText("Tela Bem Vindo");
@@ -164,28 +168,38 @@ public class TelaPrincipal extends javax.swing.JFrame {
                 jMenuItem1ActionPerformed(evt);
             }
         });
-        jMenu3.add(jMenuItem1);
+        mnferramentas.add(jMenuItem1);
 
-        jMenuBar1.add(jMenu3);
+        jMenuBar1.add(mnferramentas);
 
-        btsair.setForeground(new java.awt.Color(0, 0, 0));
-        btsair.setText("Sair");
-        btsair.addActionListener(new java.awt.event.ActionListener() {
+        mnsair.setForeground(new java.awt.Color(0, 0, 0));
+        mnsair.setText("Sair");
+        mnsair.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btsairActionPerformed(evt);
+                mnsairActionPerformed(evt);
             }
         });
 
         btSair.setForeground(new java.awt.Color(0, 0, 0));
+        btSair.setIcon(new javax.swing.ImageIcon(getClass().getResource("/lojadino/Imagens/close1.png"))); // NOI18N
         btSair.setText("Sair");
         btSair.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btSairActionPerformed(evt);
             }
         });
-        btsair.add(btSair);
+        mnsair.add(btSair);
 
-        jMenuBar1.add(btsair);
+        btrelogar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/lojadino/Imagens/refresh.png"))); // NOI18N
+        btrelogar.setText("Relogar");
+        btrelogar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btrelogarActionPerformed(evt);
+            }
+        });
+        mnsair.add(btrelogar);
+
+        jMenuBar1.add(mnsair);
 
         setJMenuBar(jMenuBar1);
 
@@ -193,9 +207,9 @@ public class TelaPrincipal extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jMenu1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu1ActionPerformed
+    private void mncadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mncadastrarActionPerformed
         new CadastroClientes().setVisible(true);
-    }//GEN-LAST:event_jMenu1ActionPerformed
+    }//GEN-LAST:event_mncadastrarActionPerformed
 
     private void btclientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btclientesActionPerformed
         new CadastroClientes().setVisible(true);
@@ -217,17 +231,23 @@ public class TelaPrincipal extends javax.swing.JFrame {
         internalFrame.setVisible(true);        // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
-    private void btsairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btsairActionPerformed
-            // TODO add your handling code here:
-    }//GEN-LAST:event_btsairActionPerformed
+    private void mnsairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnsairActionPerformed
+            new TelaDeAcesso().setVisible(true);
+           
+    }//GEN-LAST:event_mnsairActionPerformed
 
     private void btSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btSairActionPerformed
-       System.exit(0);    // TODO add your handling code here:
+       dispose();   // TODO add your handling code here:
     }//GEN-LAST:event_btSairActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         new CadastroClientes().setVisible(true);                   // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void btrelogarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btrelogarActionPerformed
+        new TelaDeAcesso().setVisible(true);
+            dispose();   // TODO add your handling code here:
+    }//GEN-LAST:event_btrelogarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -269,17 +289,18 @@ public class TelaPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenuItem btclientes;
     private javax.swing.JButton btexit;
     private javax.swing.JMenuItem btprodutos;
-    private javax.swing.JMenu btsair;
+    private javax.swing.JMenuItem btrelogar;
     private javax.swing.JLabel fundoLogin;
     private javax.swing.JInternalFrame internalFrame;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenu jMenu2;
-    private javax.swing.JMenu jMenu3;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenu mdvender;
+    private javax.swing.JMenu mncadastrar;
+    private javax.swing.JMenu mnferramentas;
+    private javax.swing.JMenu mnsair;
     private javax.swing.JPanel painelinterno;
     private javax.swing.JLabel sistemagerenciamento;
     private javax.swing.JLabel telafundo;

@@ -13,8 +13,6 @@ import javax.swing.JOptionPane;
  */
 public class Login extends javax.swing.JFrame {
 
-    private Object nome;
-
     /**
      * Creates new form Login
      */
@@ -32,7 +30,7 @@ public class Login extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        txtsenha = new javax.swing.JPasswordField();
+        txtsenha1 = new javax.swing.JPasswordField();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         txtlogin = new javax.swing.JTextField();
@@ -72,8 +70,8 @@ public class Login extends javax.swing.JFrame {
 
         getContentPane().add(jPanel1);
         jPanel1.setBounds(10, 420, 778, 0);
-        getContentPane().add(txtsenha);
-        txtsenha.setBounds(200, 210, 240, 30);
+        getContentPane().add(txtsenha1);
+        txtsenha1.setBounds(200, 210, 240, 30);
 
         jLabel2.setFont(new java.awt.Font("Tempus Sans ITC", 1, 36)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(102, 102, 102));
@@ -187,7 +185,7 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_txtCadastrarActionPerformed
 
     private void txtLogarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtLogarActionPerformed
-        if(txtlogin.getText().equals(this.nome) && txtsenha.getText().equals("1234")){
+        if(txtlogin.getText().equals("teste") && txtsenha1.getText().equals("1234")){
         new TelaPrincipal().setVisible(true);
         dispose();
         }else {
@@ -250,6 +248,6 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JButton txtCadastrar;
     private javax.swing.JButton txtLogar;
     private javax.swing.JTextField txtlogin;
-    private javax.swing.JPasswordField txtsenha;
+    private javax.swing.JPasswordField txtsenha1;
     // End of variables declaration//GEN-END:variables
 }

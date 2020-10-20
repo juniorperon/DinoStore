@@ -27,8 +27,8 @@ public class Carregamento extends javax.swing.JFrame {
                  try {
                      sleep(100); // delay de 100ms pra cada loop do for
                      if (i == 100) {
-                         Login login = new Login (); // Orientação a objeto, chama a janela de SPLASH após entrar no IF
-                         login.setVisible(true);
+                         TelaDeAcesso TelaDeAcesso = new TelaDeAcesso (); // Orientação a objeto, chama a janela de SPLASH após entrar no IF
+                         TelaDeAcesso.setVisible(true);
                          dispose(); // fecha a janela após entrar no IF
                      }
                  } catch (InterruptedException ex) {
