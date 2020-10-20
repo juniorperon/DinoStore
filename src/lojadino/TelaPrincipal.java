@@ -47,6 +47,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
         btSair = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Sistema de Gerenciamento");
         setResizable(false);
         getContentPane().setLayout(null);
 

@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package lojadino;
-
+;
 import javax.swing.JOptionPane;
 
 /**
@@ -12,6 +12,8 @@ import javax.swing.JOptionPane;
  * @author Paulo
  */
 public class Login extends javax.swing.JFrame {
+
+    private Object nome;
 
     /**
      * Creates new form Login
@@ -54,6 +56,7 @@ public class Login extends javax.swing.JFrame {
         setTitle("DinoStore");
         setBackground(new java.awt.Color(204, 204, 204));
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        setResizable(false);
         getContentPane().setLayout(null);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -79,7 +82,6 @@ public class Login extends javax.swing.JFrame {
         jLabel2.setBounds(170, 40, 320, 40);
 
         jLabel3.setFont(new java.awt.Font("Tempus Sans ITC", 1, 18)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
         jLabel3.setText("Login CPF");
         getContentPane().add(jLabel3);
         jLabel3.setBounds(200, 100, 120, 20);
@@ -91,13 +93,11 @@ public class Login extends javax.swing.JFrame {
         txtlogin.getAccessibleContext().setAccessibleName("CPF");
 
         jLabel4.setFont(new java.awt.Font("Tempus Sans ITC", 1, 18)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
         jLabel4.setText("Senha");
         getContentPane().add(jLabel4);
         jLabel4.setBounds(200, 180, 50, 25);
 
         txtLogar.setBackground(new java.awt.Color(255, 255, 255));
-        txtLogar.setForeground(new java.awt.Color(0, 0, 0));
         txtLogar.setText("Logar");
         txtLogar.setBorder(null);
         txtLogar.addActionListener(new java.awt.event.ActionListener() {
@@ -109,7 +109,6 @@ public class Login extends javax.swing.JFrame {
         txtLogar.setBounds(200, 270, 90, 30);
 
         txtCadastrar.setBackground(new java.awt.Color(255, 255, 255));
-        txtCadastrar.setForeground(new java.awt.Color(0, 0, 0));
         txtCadastrar.setText("Cadastrar");
         txtCadastrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -188,7 +187,7 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_txtCadastrarActionPerformed
 
     private void txtLogarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtLogarActionPerformed
-        if(txtlogin.getText().equals("123456") && txtsenha.getText().equals("1234")){
+        if(txtlogin.getText().equals(this.nome) && txtsenha.getText().equals("1234")){
         new TelaPrincipal().setVisible(true);
         dispose();
         }else {

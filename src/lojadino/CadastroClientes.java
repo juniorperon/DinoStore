@@ -31,7 +31,7 @@ public class CadastroClientes extends javax.swing.JFrame {
 
         primeiropainel = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
-        jTextField5 = new javax.swing.JTextField();
+        txtusuario = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
         jTextField6 = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
@@ -39,7 +39,7 @@ public class CadastroClientes extends javax.swing.JFrame {
         jLabel10 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        txtnome = new javax.swing.JTextField();
         jTextField2 = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
         jTextField3 = new javax.swing.JTextField();
@@ -50,7 +50,7 @@ public class CadastroClientes extends javax.swing.JFrame {
         txtcadastrar = new javax.swing.JButton();
         jRadioButton1 = new javax.swing.JRadioButton();
         jRadioButton2 = new javax.swing.JRadioButton();
-        jPasswordField1 = new javax.swing.JPasswordField();
+        txtsenha = new javax.swing.JPasswordField();
         jLabel11 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
@@ -63,75 +63,71 @@ public class CadastroClientes extends javax.swing.JFrame {
         primeiropainel.setLayout(null);
 
         jLabel7.setFont(new java.awt.Font("Impact", 0, 14)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel7.setText("Estado");
+        jLabel7.setText("Usuario");
         primeiropainel.add(jLabel7);
         jLabel7.setBounds(490, 110, 70, 20);
-        primeiropainel.add(jTextField5);
-        jTextField5.setBounds(490, 140, 150, 22);
+
+        txtusuario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtusuarioActionPerformed(evt);
+            }
+        });
+        primeiropainel.add(txtusuario);
+        txtusuario.setBounds(490, 140, 150, 20);
 
         jLabel8.setFont(new java.awt.Font("Impact", 0, 14)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(0, 0, 0));
         jLabel8.setText("Cidade");
         primeiropainel.add(jLabel8);
         jLabel8.setBounds(490, 170, 80, 20);
         primeiropainel.add(jTextField6);
-        jTextField6.setBounds(490, 200, 150, 22);
+        jTextField6.setBounds(490, 200, 150, 20);
 
         jLabel9.setFont(new java.awt.Font("Impact", 0, 14)); // NOI18N
-        jLabel9.setForeground(new java.awt.Color(0, 0, 0));
         jLabel9.setText("Endereco");
         primeiropainel.add(jLabel9);
         jLabel9.setBounds(490, 240, 50, 20);
         primeiropainel.add(jTextField7);
-        jTextField7.setBounds(490, 270, 150, 22);
+        jTextField7.setBounds(490, 270, 150, 20);
 
         jLabel10.setFont(new java.awt.Font("Impact", 0, 14)); // NOI18N
-        jLabel10.setForeground(new java.awt.Color(0, 0, 0));
         jLabel10.setText("Senha");
         primeiropainel.add(jLabel10);
         jLabel10.setBounds(490, 300, 40, 20);
 
         jLabel2.setFont(new java.awt.Font("Impact", 1, 36)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setText("Cadastro de Clientes");
         primeiropainel.add(jLabel2);
         jLabel2.setBounds(170, 30, 350, 50);
 
         jLabel3.setFont(new java.awt.Font("Impact", 0, 14)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
         jLabel3.setText("Nome");
         primeiropainel.add(jLabel3);
         jLabel3.setBounds(170, 110, 40, 20);
-        primeiropainel.add(jTextField1);
-        jTextField1.setBounds(170, 140, 150, 22);
+        primeiropainel.add(txtnome);
+        txtnome.setBounds(170, 140, 150, 20);
         primeiropainel.add(jTextField2);
-        jTextField2.setBounds(170, 200, 150, 22);
+        jTextField2.setBounds(170, 200, 150, 20);
 
         jLabel4.setFont(new java.awt.Font("Impact", 0, 14)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
         jLabel4.setText("Email");
         primeiropainel.add(jLabel4);
         jLabel4.setBounds(170, 170, 50, 20);
         primeiropainel.add(jTextField3);
-        jTextField3.setBounds(170, 270, 150, 22);
+        jTextField3.setBounds(170, 270, 150, 20);
 
         jLabel5.setFont(new java.awt.Font("Impact", 0, 14)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(0, 0, 0));
         jLabel5.setText("Data de Nascimento");
         primeiropainel.add(jLabel5);
         jLabel5.setBounds(170, 240, 120, 20);
 
         jLabel6.setFont(new java.awt.Font("Impact", 0, 14)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(0, 0, 0));
         jLabel6.setText("Telefone");
         primeiropainel.add(jLabel6);
         jLabel6.setBounds(170, 300, 50, 20);
         primeiropainel.add(jTextField4);
-        jTextField4.setBounds(170, 330, 150, 22);
+        jTextField4.setBounds(170, 330, 150, 20);
 
         txtcancelar.setBackground(new java.awt.Color(255, 255, 255));
-        txtcancelar.setForeground(new java.awt.Color(0, 0, 0));
         txtcancelar.setText("Cancelar");
         txtcancelar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -139,10 +135,9 @@ public class CadastroClientes extends javax.swing.JFrame {
             }
         });
         primeiropainel.add(txtcancelar);
-        txtcancelar.setBounds(530, 390, 90, 22);
+        txtcancelar.setBounds(530, 390, 90, 23);
 
         txtcadastrar.setBackground(new java.awt.Color(255, 255, 255));
-        txtcadastrar.setForeground(new java.awt.Color(0, 0, 0));
         txtcadastrar.setText("Cadastrar");
         txtcadastrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -150,11 +145,11 @@ public class CadastroClientes extends javax.swing.JFrame {
             }
         });
         primeiropainel.add(txtcadastrar);
-        txtcadastrar.setBounds(200, 390, 90, 22);
+        txtcadastrar.setBounds(200, 390, 90, 23);
 
         jRadioButton1.setText("Masculino");
         primeiropainel.add(jRadioButton1);
-        jRadioButton1.setBounds(550, 50, 78, 20);
+        jRadioButton1.setBounds(550, 50, 71, 23);
 
         jRadioButton2.setText("Feminino");
         jRadioButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -163,11 +158,11 @@ public class CadastroClientes extends javax.swing.JFrame {
             }
         });
         primeiropainel.add(jRadioButton2);
-        jRadioButton2.setBounds(660, 50, 70, 20);
+        jRadioButton2.setBounds(660, 50, 70, 23);
 
-        jPasswordField1.setText("jPasswordField1");
-        primeiropainel.add(jPasswordField1);
-        jPasswordField1.setBounds(490, 330, 150, 22);
+        txtsenha.setText("jPasswordField1");
+        primeiropainel.add(txtsenha);
+        txtsenha.setBounds(490, 330, 150, 20);
 
         jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/lojadino/background1.jpg"))); // NOI18N
         primeiropainel.add(jLabel11);
@@ -199,9 +194,14 @@ public class CadastroClientes extends javax.swing.JFrame {
     }//GEN-LAST:event_txtcancelarActionPerformed
 
     private void txtcadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtcadastrarActionPerformed
-        setVisible(false);
+            this.nome = txtnome.getText();
+       new Login().setVisible(true);
         
     }//GEN-LAST:event_txtcadastrarActionPerformed
+
+    private void txtusuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtusuarioActionPerformed
+        this.cidade = txtusuario.getText();// TODO add your handling code here:
+    }//GEN-LAST:event_txtusuarioActionPerformed
 
     /**
      * @param args the command line arguments
@@ -250,18 +250,18 @@ public class CadastroClientes extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JPasswordField jPasswordField1;
     private javax.swing.JRadioButton jRadioButton1;
     private javax.swing.JRadioButton jRadioButton2;
-    private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
     private javax.swing.JTextField jTextField6;
     private javax.swing.JTextField jTextField7;
     private javax.swing.JPanel primeiropainel;
     private javax.swing.JButton txtcadastrar;
     private javax.swing.JButton txtcancelar;
+    private javax.swing.JTextField txtnome;
+    private javax.swing.JPasswordField txtsenha;
+    private javax.swing.JTextField txtusuario;
     // End of variables declaration//GEN-END:variables
 }
