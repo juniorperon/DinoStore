@@ -22,6 +22,7 @@ public class CadastroClientes extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+<<<<<<< HEAD
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -46,12 +47,38 @@ public class CadastroClientes extends javax.swing.JFrame {
         txtEmail = new javax.swing.JTextField();
         txtNascimento = new javax.swing.JTextField();
         txtTelefone = new javax.swing.JTextField();
+=======
+        primeiropainel = new javax.swing.JPanel();
+        jLabel7 = new javax.swing.JLabel();
+        txtusuario = new javax.swing.JTextField();
+        jLabel8 = new javax.swing.JLabel();
+        jTextField6 = new javax.swing.JTextField();
+        jLabel9 = new javax.swing.JLabel();
+        jTextField7 = new javax.swing.JTextField();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        txtnome = new javax.swing.JTextField();
+        jTextField2 = new javax.swing.JTextField();
+        jLabel4 = new javax.swing.JLabel();
+        jTextField3 = new javax.swing.JTextField();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jTextField4 = new javax.swing.JTextField();
+        txtcancelar = new javax.swing.JButton();
+        txtcadastrar = new javax.swing.JButton();
+        jRadioButton1 = new javax.swing.JRadioButton();
+        jRadioButton2 = new javax.swing.JRadioButton();
+        txtsenha = new javax.swing.JPasswordField();
+        jLabel11 = new javax.swing.JLabel();
+>>>>>>> 4cef3eea7a3dacfaf159e58934bcab38be547186
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("CadastroCliente");
         setBackground(getBackground());
         setFocusTraversalPolicyProvider(true);
         setResizable(false);
+<<<<<<< HEAD
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -132,10 +159,108 @@ public class CadastroClientes extends javax.swing.JFrame {
         txtEstado.setEditable(true);
         txtEstado.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Acre (AC)", "Alagoas (AL)", "Amapá (AP)", "Amazonas (AM)", "Bahia (BA)", "Ceará (CE)", "Distrito Federal (DF)", "Espírito Santo (ES)", "Goiás (GO)", "Maranhão (MA)", "Mato Grosso (MT)", "Mato Grosso do Sul (MS)", "Minas Gerais (MG)", "Pará (PA)", "Paraíba (PB)", "Paraná (PR)", "Pernambuco (PE)", "Piauí (PI)", "Rio de Janeiro (RJ)", "Rio Grande do Norte (RN)", "Rio Grande do Sul (RS)", "Rondônia (RO)", "Roraima (RR)", "Santa Catarina (SC)", "São Paulo (SP)", "Sergipe (SE)", "Tocantins (TO)" }));
         txtEstado.addActionListener(new java.awt.event.ActionListener() {
+=======
+
+        primeiropainel.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        primeiropainel.setLayout(null);
+
+        jLabel7.setFont(new java.awt.Font("Impact", 0, 14)); // NOI18N
+        jLabel7.setText("Usuario");
+        primeiropainel.add(jLabel7);
+        jLabel7.setBounds(490, 110, 70, 20);
+
+        txtusuario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtusuarioActionPerformed(evt);
+            }
+        });
+        primeiropainel.add(txtusuario);
+        txtusuario.setBounds(490, 140, 150, 20);
+
+        jLabel8.setFont(new java.awt.Font("Impact", 0, 14)); // NOI18N
+        jLabel8.setText("Cidade");
+        primeiropainel.add(jLabel8);
+        jLabel8.setBounds(490, 170, 80, 20);
+        primeiropainel.add(jTextField6);
+        jTextField6.setBounds(490, 200, 150, 20);
+
+        jLabel9.setFont(new java.awt.Font("Impact", 0, 14)); // NOI18N
+        jLabel9.setText("Endereco");
+        primeiropainel.add(jLabel9);
+        jLabel9.setBounds(490, 240, 50, 20);
+        primeiropainel.add(jTextField7);
+        jTextField7.setBounds(490, 270, 150, 20);
+
+        jLabel10.setFont(new java.awt.Font("Impact", 0, 14)); // NOI18N
+        jLabel10.setText("Senha");
+        primeiropainel.add(jLabel10);
+        jLabel10.setBounds(490, 300, 40, 20);
+
+        jLabel2.setFont(new java.awt.Font("Impact", 1, 36)); // NOI18N
+        jLabel2.setText("Cadastro de Clientes");
+        primeiropainel.add(jLabel2);
+        jLabel2.setBounds(170, 30, 350, 50);
+
+        jLabel3.setFont(new java.awt.Font("Impact", 0, 14)); // NOI18N
+        jLabel3.setText("Nome");
+        primeiropainel.add(jLabel3);
+        jLabel3.setBounds(170, 110, 40, 20);
+        primeiropainel.add(txtnome);
+        txtnome.setBounds(170, 140, 150, 20);
+        primeiropainel.add(jTextField2);
+        jTextField2.setBounds(170, 200, 150, 20);
+
+        jLabel4.setFont(new java.awt.Font("Impact", 0, 14)); // NOI18N
+        jLabel4.setText("Email");
+        primeiropainel.add(jLabel4);
+        jLabel4.setBounds(170, 170, 50, 20);
+        primeiropainel.add(jTextField3);
+        jTextField3.setBounds(170, 270, 150, 20);
+
+        jLabel5.setFont(new java.awt.Font("Impact", 0, 14)); // NOI18N
+        jLabel5.setText("Data de Nascimento");
+        primeiropainel.add(jLabel5);
+        jLabel5.setBounds(170, 240, 120, 20);
+
+        jLabel6.setFont(new java.awt.Font("Impact", 0, 14)); // NOI18N
+        jLabel6.setText("Telefone");
+        primeiropainel.add(jLabel6);
+        jLabel6.setBounds(170, 300, 50, 20);
+        primeiropainel.add(jTextField4);
+        jTextField4.setBounds(170, 330, 150, 20);
+
+        txtcancelar.setBackground(new java.awt.Color(255, 255, 255));
+        txtcancelar.setText("Cancelar");
+        txtcancelar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtcancelarActionPerformed(evt);
+            }
+        });
+        primeiropainel.add(txtcancelar);
+        txtcancelar.setBounds(530, 390, 90, 23);
+
+        txtcadastrar.setBackground(new java.awt.Color(255, 255, 255));
+        txtcadastrar.setText("Cadastrar");
+        txtcadastrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtcadastrarActionPerformed(evt);
+            }
+        });
+        primeiropainel.add(txtcadastrar);
+        txtcadastrar.setBounds(200, 390, 90, 23);
+
+        jRadioButton1.setText("Masculino");
+        primeiropainel.add(jRadioButton1);
+        jRadioButton1.setBounds(550, 50, 71, 23);
+
+        jRadioButton2.setText("Feminino");
+        jRadioButton2.addActionListener(new java.awt.event.ActionListener() {
+>>>>>>> 4cef3eea7a3dacfaf159e58934bcab38be547186
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtEstadoActionPerformed(evt);
             }
         });
+<<<<<<< HEAD
 
         Estado.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         Estado.setText("Estado");
@@ -244,11 +369,24 @@ public class CadastroClientes extends javax.swing.JFrame {
                     .addComponent(Cadastrar, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(47, 47, 47))
         );
+=======
+        primeiropainel.add(jRadioButton2);
+        jRadioButton2.setBounds(660, 50, 70, 23);
+
+        txtsenha.setText("jPasswordField1");
+        primeiropainel.add(txtsenha);
+        txtsenha.setBounds(490, 330, 150, 20);
+
+        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/lojadino/background1.jpg"))); // NOI18N
+        primeiropainel.add(jLabel11);
+        jLabel11.setBounds(0, 0, 800, 450);
+>>>>>>> 4cef3eea7a3dacfaf159e58934bcab38be547186
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+<<<<<<< HEAD
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -258,13 +396,44 @@ public class CadastroClientes extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+=======
+            .addComponent(primeiropainel, javax.swing.GroupLayout.PREFERRED_SIZE, 800, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(primeiropainel, javax.swing.GroupLayout.DEFAULT_SIZE, 450, Short.MAX_VALUE)
+>>>>>>> 4cef3eea7a3dacfaf159e58934bcab38be547186
+        );
+
+        primeiropainel.getAccessibleContext().setAccessibleDescription("");
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
+<<<<<<< HEAD
         /**
+=======
+    private void jRadioButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton2ActionPerformed
+
+    private void txtcancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtcancelarActionPerformed
+        setVisible(false);
+    }//GEN-LAST:event_txtcancelarActionPerformed
+
+    private void txtcadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtcadastrarActionPerformed
+            this.nome = txtnome.getText();
+       new Login().setVisible(true);
+        
+    }//GEN-LAST:event_txtcadastrarActionPerformed
+
+    private void txtusuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtusuarioActionPerformed
+        this.cidade = txtusuario.getText();// TODO add your handling code here:
+    }//GEN-LAST:event_txtusuarioActionPerformed
+
+    /**
+>>>>>>> 4cef3eea7a3dacfaf159e58934bcab38be547186
      * @param args the command line arguments
      */
     public static void main(String args[]) {
@@ -316,6 +485,7 @@ public class CadastroClientes extends javax.swing.JFrame {
     }//GEN-LAST:event_txtSexoActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+<<<<<<< HEAD
     private javax.swing.JButton Cadastrar;
     private javax.swing.JLabel CadastroClientes;
     private javax.swing.JLabel Cidade;
@@ -340,5 +510,30 @@ public class CadastroClientes extends javax.swing.JFrame {
     private javax.swing.JTextField txtNome;
     private javax.swing.JComboBox<String> txtSexo;
     private javax.swing.JTextField txtTelefone;
+=======
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JRadioButton jRadioButton1;
+    private javax.swing.JRadioButton jRadioButton2;
+    private javax.swing.JTextField jTextField2;
+    private javax.swing.JTextField jTextField3;
+    private javax.swing.JTextField jTextField4;
+    private javax.swing.JTextField jTextField6;
+    private javax.swing.JTextField jTextField7;
+    private javax.swing.JPanel primeiropainel;
+    private javax.swing.JButton txtcadastrar;
+    private javax.swing.JButton txtcancelar;
+    private javax.swing.JTextField txtnome;
+    private javax.swing.JPasswordField txtsenha;
+    private javax.swing.JTextField txtusuario;
+>>>>>>> 4cef3eea7a3dacfaf159e58934bcab38be547186
     // End of variables declaration//GEN-END:variables
 }
