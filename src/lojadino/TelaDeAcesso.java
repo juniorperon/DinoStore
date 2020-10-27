@@ -5,6 +5,7 @@
  */
 package lojadino;
 
+import java.awt.event.KeyListener;
 import javax.swing.JOptionPane;
 
 /**
@@ -95,6 +96,12 @@ public class TelaDeAcesso extends javax.swing.JFrame {
         jLabel5.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         jLabel5.setText("Login");
 
+        txtlogin.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                txtloginKeyPressed(evt);
+            }
+        });
+
         jLabel6.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         jLabel6.setText("Senha");
 
@@ -104,6 +111,11 @@ public class TelaDeAcesso extends javax.swing.JFrame {
         btlogar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btlogarActionPerformed(evt);
+            }
+        });
+        btlogar.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                btlogarKeyPressed(evt);
             }
         });
 
@@ -189,7 +201,16 @@ public class TelaDeAcesso extends javax.swing.JFrame {
         }else {
             JOptionPane.showMessageDialog(rootPane, "Usuário ou Senha inválidos");
         }
+             
     }//GEN-LAST:event_btlogarActionPerformed
+
+    private void btlogarKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_btlogarKeyPressed
+        
+    }//GEN-LAST:event_btlogarKeyPressed
+
+    private void txtloginKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtloginKeyPressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtloginKeyPressed
 
     /**
      * @param args the command line arguments
