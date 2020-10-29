@@ -275,10 +275,11 @@ public class CadastroClientes extends javax.swing.JFrame {
             txtcpf.setText("");
             txtendereco.setText("");
             txtnasc.setText("");
-            txtEstado.setSelectedItem(0);
-            txtSexo.setSelectedItem(0);
+            txtEstado.setSelectedIndex(0);
+            txtSexo.setSelectedIndex(0);
             txtemail.setText("");
             txttelefone.setText("");
+            txtsenha.setText("");
         }
         
     }//GEN-LAST:event_cadastrarActionPerformed

@@ -1,6 +1,0 @@
-CADASTRO_CLIENTE.UICadastro_Cliente$5
-CADASTRO_CLIENTE.UICadastro_Cliente$4
-CADASTRO_CLIENTE.UICadastro_Cliente$3
-CADASTRO_CLIENTE.UICadastro_Cliente$2
-CADASTRO_CLIENTE.UICadastro_Cliente
-CADASTRO_CLIENTE.UICadastro_Cliente$1
