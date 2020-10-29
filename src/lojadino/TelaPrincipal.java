@@ -69,7 +69,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jButton1.setBackground(new java.awt.Color(255, 255, 255));
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/lojadino/Imagens/stegosaurus.png"))); // NOI18N
         jButton1.setToolTipText("Dinossauros");
-        jButton1.setBorder(new javax.swing.border.MatteBorder(null));
+        jButton1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -81,7 +81,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jButton2.setBackground(new java.awt.Color(255, 255, 255));
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/lojadino/Imagens/cadastrar.png"))); // NOI18N
         jButton2.setToolTipText("Clientes");
-        jButton2.setBorder(new javax.swing.border.MatteBorder(null));
+        jButton2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);

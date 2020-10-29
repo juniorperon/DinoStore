@@ -208,8 +208,8 @@
                 </Property>
                 <Property name="toolTipText" type="java.lang.String" value="Dinossauros"/>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                  <Border info="org.netbeans.modules.form.compat2.border.MatteColorBorderInfo">
-                    <MatteColorBorder/>
+                  <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                    <LineBorder/>
                   </Border>
                 </Property>
               </Properties>
@@ -232,8 +232,8 @@
                 </Property>
                 <Property name="toolTipText" type="java.lang.String" value="Clientes"/>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                  <Border info="org.netbeans.modules.form.compat2.border.MatteColorBorderInfo">
-                    <MatteColorBorder/>
+                  <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                    <LineBorder/>
                   </Border>
                 </Property>
               </Properties>
