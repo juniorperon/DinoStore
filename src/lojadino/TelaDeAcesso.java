@@ -94,7 +94,7 @@ public class TelaDeAcesso extends javax.swing.JFrame {
         jLabel4.setText("Acesso ao Sistema");
 
         jLabel5.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        jLabel5.setText("Login");
+        jLabel5.setText("Login - CPF");
 
         txtlogin.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {

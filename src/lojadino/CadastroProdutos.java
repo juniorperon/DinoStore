@@ -198,8 +198,8 @@ public class CadastroProdutos extends javax.swing.JFrame {
     private void cadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cadastrarActionPerformed
             if (txtAlimentacao.getText().equals("")
                     || txtEspecie.getText().equals("")
-                        || txtSexodino.equals(0)
-                            || txtTamanho.equals(0)
+                        || txtSexodino.equals("")
+                            || txtTamanho.equals("")
                                 || txtnascdino.getText().equals("")
                                     || txtnomeDino.getText().equals("")){
                        JOptionPane.showMessageDialog(rootPane, "Preencha todos os campos");

@@ -261,18 +261,26 @@ public class CadastroClientes extends javax.swing.JFrame {
                 || txtCidade.getText().equals("")
                     || txtcpf.getText().equals("") 
                         || txtendereco.getText().equals("")
-                            || txtnasc.getText().equals("")
-                                || txtEstado.equals(0)
-                                    || txtnasc.equals("")
-                                        || txtemail.getText().equals("")
-                                            || txttelefone.getText().equals("")
-                                                || txtsenha.getPassword().equals("")){
+                            || txtnasc.getText().equals("")                                                              
+                                    || txtemail.getText().equals("")
+                                        || txttelefone.getText().equals("")
+                                           || txtsenha.getPassword().equals("")
+                                               || txtSexo.equals(0)){
             JOptionPane.showMessageDialog(rootPane, "Preencha todos os campos");
                                     
         }else {
             JOptionPane.showMessageDialog(rootPane, "Usuário Cadastrado com Sucesso!");
+            txtCidade.setText("");
+            txtNome.setText("");
+            txtcpf.setText("");
+            txtendereco.setText("");
+            txtnasc.setText("");
+            txtEstado.setSelectedItem(0);
+            txtSexo.setSelectedItem(0);
+            txtemail.setText("");
+            txttelefone.setText("");
         }
-  
+        
     }//GEN-LAST:event_cadastrarActionPerformed
 
     private void txtemailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtemailActionPerformed
