@@ -191,15 +191,15 @@ public class TelaDeAcesso extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btcadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btcadastrarActionPerformed
-     new CadastroClientes().setVisible(true);  // TODO add your handling code here:
+     new CadastroClientes().setVisible(true);  // CARREGAR TELA CADASTRO DE CLIENTES
     }//GEN-LAST:event_btcadastrarActionPerformed
 
     private void btlogarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btlogarActionPerformed
-              if(txtlogin.getText().equals("123456") && txtsenha.getText().equals("1234")){
+              if(txtlogin.getText().equals("teste") && txtsenha.getText().equals("1234")){
         new TelaPrincipal().setVisible(true);
         dispose();
         }else {
-            JOptionPane.showMessageDialog(rootPane, "Usuário ou Senha inválidos");
+            JOptionPane.showMessageDialog(rootPane, "Usuário ou Senha inválidos"); // 
         }
              
     }//GEN-LAST:event_btlogarActionPerformed

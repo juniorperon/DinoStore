@@ -1,6 +1,6 @@
 
-package lojadino;
-
+package lojadino.Principal;
+import lojadino.Carregamento;
 public class LojaDino {
  
     public static void main(String[] args) {
