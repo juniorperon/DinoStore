@@ -195,7 +195,7 @@ public class TelaDeAcesso extends javax.swing.JFrame {
     }//GEN-LAST:event_btcadastrarActionPerformed
 
     private void btlogarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btlogarActionPerformed
-              if(txtlogin.getText().equals("teste") && txtsenha.getText().equals("1234")){
+              if(txtlogin.getText().equals("123456") && txtsenha.getText().equals("1234")){
         new TelaPrincipal().setVisible(true);
         dispose();
         }else {

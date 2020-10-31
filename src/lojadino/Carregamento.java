@@ -32,7 +32,7 @@ public class Carregamento extends javax.swing.JFrame {
                          dispose(); // fecha a janela após entrar no IF
                      }
                  } catch (InterruptedException ex) {
-                     Logger.getLogger(UISplash.class.getName()).log(Level.SEVERE, null, ex);
+                     Logger.getLogger(Carregamento.class.getName()).log(Level.SEVERE, null, ex);
                  }
                  
                  barra.setValue(i);
