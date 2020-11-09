@@ -1,11 +1,26 @@
-# DinoStore
+﻿# DinoStore
 Sistema de loja de vendas de dinossauros.
 
-primeira parte - acesso ao sistema ou cadastro de usuário,
-ainda não está integrado com banco de dados.
+DINOSTORE
 
-ACESSO AO SISTEMA ( Login e senha pré definidos )
-LOGIN = teste
-SENHA = 1234
+Equipe
+- Ailton Junior
+- Eliandro Freitas
+- Paulo Henrique
 
-tela de gerenciamento, cadastro de clientes ou produtos.
+Classes do Projeto
+
+ - Clientes
+ - Produtos
+
+Telas Frontend
+
+ - Carregamento
+ - Tela de Acesso
+ - Cadastro de Cliente
+ - Cadastro de Produto
+
+Obs:
+O sistema futuramente terá um catálogo com os produtos já cadastros, juntamente com o carrinho de compras.
+
+
