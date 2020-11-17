@@ -26,12 +26,12 @@ public class Produtos {
         this.especie = especie;
     }
 
-    public String getLimentacao() {
+    public String getALimentacao() {
         return alimentacao;
     }
 
-    public void setLimentacao(String limentacao) {
-        this.alimentacao = limentacao;
+    public void setALimentacao(String Alimentacao) {
+        this.alimentacao = Alimentacao;
     }
 
     public String getNascimento() {

@@ -58,20 +58,20 @@
                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
                       <Component id="nome" alignment="0" min="-2" max="-2" attributes="0"/>
                       <Component id="jLabel6" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="txtnomeDino" alignment="0" max="32767" attributes="0"/>
-                      <Component id="txtEspecie" alignment="0" pref="200" max="32767" attributes="0"/>
+                      <Component id="txtnome" alignment="0" max="32767" attributes="0"/>
+                      <Component id="txtespecie" alignment="0" pref="200" max="32767" attributes="0"/>
                       <Component id="voltar" alignment="1" max="32767" attributes="0"/>
                       <Component id="nascimento" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="txtnascdino" max="32767" attributes="0"/>
+                      <Component id="txtnasc" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                      <Component id="txtSexodino" max="32767" attributes="0"/>
-                      <Component id="txtTamanho" max="32767" attributes="0"/>
+                      <Component id="txtsexo" max="32767" attributes="0"/>
+                      <Component id="txttamanho" max="32767" attributes="0"/>
                       <Component id="sexo" alignment="0" min="-2" max="-2" attributes="0"/>
                       <Component id="Alimentacao" alignment="0" min="-2" max="-2" attributes="0"/>
                       <Component id="tamanho" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="txtAlimentacao" alignment="1" pref="200" max="32767" attributes="0"/>
+                      <Component id="txtalimentacao" alignment="1" pref="200" max="32767" attributes="0"/>
                       <Component id="cadastrar" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
@@ -88,28 +88,28 @@
                       <Group type="102" attributes="0">
                           <Component id="nome" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="txtnomeDino" min="-2" pref="40" max="-2" attributes="0"/>
+                          <Component id="txtnome" min="-2" pref="40" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="txtEspecie" min="-2" pref="40" max="-2" attributes="0"/>
+                          <Component id="txtespecie" min="-2" pref="40" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="nascimento" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="txtnascdino" pref="41" max="32767" attributes="0"/>
+                          <Component id="txtnasc" pref="41" max="32767" attributes="0"/>
                       </Group>
                       <Group type="102" attributes="0">
                           <Component id="Alimentacao" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="txtAlimentacao" min="-2" pref="40" max="-2" attributes="0"/>
+                          <Component id="txtalimentacao" min="-2" pref="40" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="tamanho" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="txtTamanho" min="-2" pref="40" max="-2" attributes="0"/>
+                          <Component id="txttamanho" min="-2" pref="40" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="sexo" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="txtSexodino" max="32767" attributes="0"/>
+                          <Component id="txtsexo" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
@@ -139,7 +139,7 @@
             <Property name="text" type="java.lang.String" value="Nome"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="txtnomeDino">
+        <Component class="javax.swing.JTextField" name="txtnome">
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel6">
           <Properties>
@@ -177,9 +177,9 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cadastrarActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JTextField" name="txtEspecie">
+        <Component class="javax.swing.JTextField" name="txtespecie">
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtEspecieActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtespecieActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="nascimento">
@@ -198,7 +198,7 @@
             <Property name="text" type="java.lang.String" value="Alimenta&#xe7;&#xe3;o"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="txtAlimentacao">
+        <Component class="javax.swing.JTextField" name="txtalimentacao">
         </Component>
         <Component class="javax.swing.JLabel" name="tamanho">
           <Properties>
@@ -216,7 +216,7 @@
             <Property name="text" type="java.lang.String" value="Sexo"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JComboBox" name="txtTamanho">
+        <Component class="javax.swing.JComboBox" name="txttamanho">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
               <StringArray count="4">
@@ -231,7 +231,7 @@
             <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
           </AuxValues>
         </Component>
-        <Component class="javax.swing.JComboBox" name="txtSexodino">
+        <Component class="javax.swing.JComboBox" name="txtsexo">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
               <StringArray count="3">
@@ -245,7 +245,7 @@
             <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
           </AuxValues>
         </Component>
-        <Component class="javax.swing.JFormattedTextField" name="txtnascdino">
+        <Component class="javax.swing.JFormattedTextField" name="txtnasc">
           <Properties>
             <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor" preCode="try {" postCode="} catch (java.text.ParseException ex) {&#xa;ex.printStackTrace();&#xa;}">
               <Format format="##/##/####" subtype="-1" type="5"/>

@@ -29,6 +29,9 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
         internalFrame = new javax.swing.JInternalFrame();
         painelinterno = new javax.swing.JPanel();
+        jButton4 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
@@ -40,9 +43,15 @@ public class TelaPrincipal extends javax.swing.JFrame {
         mncadastrar = new javax.swing.JMenu();
         btclientes = new javax.swing.JMenuItem();
         btprodutos = new javax.swing.JMenuItem();
+        jMenuItem3 = new javax.swing.JMenuItem();
         mdvender = new javax.swing.JMenu();
+        jMenuItem2 = new javax.swing.JMenuItem();
         mnferramentas = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
+        jMenu1 = new javax.swing.JMenu();
+        jMenuItem4 = new javax.swing.JMenuItem();
+        jMenuItem6 = new javax.swing.JMenuItem();
+        jMenuItem5 = new javax.swing.JMenuItem();
         mnsair = new javax.swing.JMenu();
         btSair = new javax.swing.JMenuItem();
         btrelogar = new javax.swing.JMenuItem();
@@ -60,8 +69,36 @@ public class TelaPrincipal extends javax.swing.JFrame {
         painelinterno.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         painelinterno.setLayout(null);
 
+        jButton4.setBackground(new java.awt.Color(255, 255, 255));
+        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/lojadino/Imagens/func.png"))); // NOI18N
+        jButton4.setToolTipText("Dinossauros");
+        jButton4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
+        painelinterno.add(jButton4);
+        jButton4.setBounds(260, 60, 90, 70);
+
+        jButton3.setBackground(new java.awt.Color(255, 255, 255));
+        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/lojadino/Imagens/supermarket-cart (1).png"))); // NOI18N
+        jButton3.setToolTipText("Produto - Dinossauro");
+        jButton3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+        painelinterno.add(jButton3);
+        jButton3.setBounds(20, 190, 90, 70);
+
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel1.setText("Venda - ");
+        painelinterno.add(jLabel1);
+        jLabel1.setBounds(30, 160, 80, 20);
+
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setText("Cadastros -");
         painelinterno.add(jLabel2);
         jLabel2.setBounds(30, 20, 100, 20);
@@ -76,7 +113,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
             }
         });
         painelinterno.add(jButton1);
-        jButton1.setBounds(130, 70, 90, 70);
+        jButton1.setBounds(140, 60, 90, 70);
 
         jButton2.setBackground(new java.awt.Color(255, 255, 255));
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/lojadino/Imagens/cadastrar.png"))); // NOI18N
@@ -88,7 +125,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
             }
         });
         painelinterno.add(jButton2);
-        jButton2.setBounds(20, 70, 90, 70);
+        jButton2.setBounds(20, 60, 90, 70);
 
         telafundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/lojadino/Imagens/internalframe.png"))); // NOI18N
         telafundo.setText("jLabel1");
@@ -99,7 +136,6 @@ public class TelaPrincipal extends javax.swing.JFrame {
         painelinterno.setBounds(10, 70, 810, 270);
 
         sistemagerenciamento.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        sistemagerenciamento.setForeground(new java.awt.Color(0, 0, 0));
         sistemagerenciamento.setText("Sistema de Gerenciamento");
         internalFrame.getContentPane().add(sistemagerenciamento);
         sistemagerenciamento.setBounds(10, 10, 280, 25);
@@ -124,7 +160,6 @@ public class TelaPrincipal extends javax.swing.JFrame {
         fundoLogin.setBounds(0, 0, 1900, 1267);
 
         mncadastrar.setBackground(new java.awt.Color(255, 255, 255));
-        mncadastrar.setForeground(new java.awt.Color(0, 0, 0));
         mncadastrar.setText("Cadastrar");
         mncadastrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -132,7 +167,6 @@ public class TelaPrincipal extends javax.swing.JFrame {
             }
         });
 
-        btclientes.setForeground(new java.awt.Color(0, 0, 0));
         btclientes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/lojadino/Imagens/cadastrar.png"))); // NOI18N
         btclientes.setText("Clientes");
         btclientes.addActionListener(new java.awt.event.ActionListener() {
@@ -142,7 +176,6 @@ public class TelaPrincipal extends javax.swing.JFrame {
         });
         mncadastrar.add(btclientes);
 
-        btprodutos.setForeground(new java.awt.Color(0, 0, 0));
         btprodutos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/lojadino/Imagens/stegosaurus.png"))); // NOI18N
         btprodutos.setText("Produtos");
         btprodutos.addActionListener(new java.awt.event.ActionListener() {
@@ -152,16 +185,27 @@ public class TelaPrincipal extends javax.swing.JFrame {
         });
         mncadastrar.add(btprodutos);
 
+        jMenuItem3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/lojadino/Imagens/func.png"))); // NOI18N
+        jMenuItem3.setText("Funcionários");
+        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem3ActionPerformed(evt);
+            }
+        });
+        mncadastrar.add(jMenuItem3);
+
         jMenuBar1.add(mncadastrar);
 
-        mdvender.setForeground(new java.awt.Color(0, 0, 0));
         mdvender.setText("Vender");
+
+        jMenuItem2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/lojadino/Imagens/supermarket-cart.png"))); // NOI18N
+        jMenuItem2.setText("Vender");
+        mdvender.add(jMenuItem2);
+
         jMenuBar1.add(mdvender);
 
-        mnferramentas.setForeground(new java.awt.Color(0, 0, 0));
         mnferramentas.setText("Ferramentas");
 
-        jMenuItem1.setForeground(new java.awt.Color(0, 0, 0));
         jMenuItem1.setText("Tela Bem Vindo");
         jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -172,7 +216,27 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
         jMenuBar1.add(mnferramentas);
 
-        mnsair.setForeground(new java.awt.Color(0, 0, 0));
+        jMenu1.setText("Pesquisar");
+
+        jMenuItem4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/lojadino/Imagens/cadastrar.png"))); // NOI18N
+        jMenuItem4.setText("Clientes");
+        jMenu1.add(jMenuItem4);
+
+        jMenuItem6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/lojadino/Imagens/stegosaurus.png"))); // NOI18N
+        jMenuItem6.setText("Produtos");
+        jMenu1.add(jMenuItem6);
+
+        jMenuItem5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/lojadino/Imagens/func.png"))); // NOI18N
+        jMenuItem5.setText("Funcionários");
+        jMenuItem5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem5ActionPerformed(evt);
+            }
+        });
+        jMenu1.add(jMenuItem5);
+
+        jMenuBar1.add(jMenu1);
+
         mnsair.setText("Sair");
         mnsair.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -180,7 +244,6 @@ public class TelaPrincipal extends javax.swing.JFrame {
             }
         });
 
-        btSair.setForeground(new java.awt.Color(0, 0, 0));
         btSair.setIcon(new javax.swing.ImageIcon(getClass().getResource("/lojadino/Imagens/close1.png"))); // NOI18N
         btSair.setText("Sair");
         btSair.addActionListener(new java.awt.event.ActionListener() {
@@ -249,6 +312,22 @@ public class TelaPrincipal extends javax.swing.JFrame {
             dispose();   // TODO add your handling code here:
     }//GEN-LAST:event_btrelogarActionPerformed
 
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
+                // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItem5ActionPerformed
+
+    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
+        new CadastroFuncionarios().setVisible(true);        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItem3ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton4ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -294,9 +373,18 @@ public class TelaPrincipal extends javax.swing.JFrame {
     private javax.swing.JInternalFrame internalFrame;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JMenu jMenu1;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem2;
+    private javax.swing.JMenuItem jMenuItem3;
+    private javax.swing.JMenuItem jMenuItem4;
+    private javax.swing.JMenuItem jMenuItem5;
+    private javax.swing.JMenuItem jMenuItem6;
     private javax.swing.JMenu mdvender;
     private javax.swing.JMenu mncadastrar;
     private javax.swing.JMenu mnferramentas;

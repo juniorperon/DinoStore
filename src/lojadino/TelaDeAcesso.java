@@ -7,6 +7,7 @@ package lojadino;
 
 import java.awt.event.KeyListener;
 import javax.swing.JOptionPane;
+import lojadino.Classes.Cliente;
 
 /**
  *
@@ -191,11 +192,14 @@ public class TelaDeAcesso extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btcadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btcadastrarActionPerformed
-     new CadastroClientes().setVisible(true);  // CARREGAR TELA CADASTRO DE CLIENTES
+     new CadastroFuncionarios().setVisible(true);  // CARREGAR TELA CADASTRO DE FUNCIONÁRIOS
+     dispose();
     }//GEN-LAST:event_btcadastrarActionPerformed
 
     private void btlogarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btlogarActionPerformed
-              if(txtlogin.getText().equals("teste") && txtsenha.getText().equals("1234")){
+        Object cpf = null;
+   
+              if(txtlogin.getText().equals(cpf) && txtsenha.getText().equals("1234")){
         new TelaPrincipal().setVisible(true);
         dispose();
         }else {

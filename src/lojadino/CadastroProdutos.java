@@ -5,7 +5,9 @@
  */
 package lojadino;
 
+import Conexão.SQL;
 import javax.swing.JOptionPane;
+import lojadino.Classes.Produtos;
 
 /**
  *
@@ -13,13 +15,53 @@ import javax.swing.JOptionPane;
  */
 public class CadastroProdutos extends javax.swing.JFrame {
 
-    /**
-     * Creates new form CadastroProdutos
-     */
+        SQL conectar = new SQL(); //acessar os métodos de conexao com o banco
+        Produtos novoProduto = new Produtos(); //acessar os atributos da classe cliente
     public CadastroProdutos() {
         initComponents();
     }
+        private void cadastraProduto(){
+        this.conectar.conectaBanco(); 
+        
+        novoProduto.setNome(txtnome.getText());
+        novoProduto.setALimentacao(txtalimentacao.getText());
+        novoProduto.setEspecie(txtespecie.getText());
+        novoProduto.setTamanho((String) txttamanho.getSelectedItem());
+        novoProduto.setNascimento(txtnasc.getText());
+        novoProduto.setSexo((String) txtsexo.getSelectedItem());
+        
 
+        
+        try {
+                        
+            this.conectar.insertSQL("INSERT INTO cadastroproduto ("
+                    + "nome_prd,"
+                    + "alimentacao,"
+                    + "especie,"
+                    + "tamanho,"
+                    + "nasc_prd,"
+                    + "sexo_prd"
+                + ") VALUES ("
+                    + "'" + novoProduto.getNome() + "',"
+                    + "'" + novoProduto.getALimentacao()+ "',"
+                    + "'" + novoProduto.getEspecie()+ "',"
+                    + "'" + novoProduto.getTamanho()+ "',"
+                    + "'" + novoProduto.getNascimento()+ "',"
+                    + "'" + novoProduto.getSexo()+ "'"
+  
+                + ");");
+            
+        } catch (Exception e) {
+            
+            System.out.println("Erro ao cadastrar produto " +  e.getMessage());
+            
+        } finally{            
+            this.conectar.fechaBanco();
+            JOptionPane.showMessageDialog(null, "Produto cadastrado com sucesso");
+            //novoCliente.limpaCliente();
+            //limparCamposCadastro();
+        }                
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -32,19 +74,19 @@ public class CadastroProdutos extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         cadastroDino = new javax.swing.JLabel();
         nome = new javax.swing.JLabel();
-        txtnomeDino = new javax.swing.JTextField();
+        txtnome = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
         voltar = new javax.swing.JButton();
         cadastrar = new javax.swing.JButton();
-        txtEspecie = new javax.swing.JTextField();
+        txtespecie = new javax.swing.JTextField();
         nascimento = new javax.swing.JLabel();
         Alimentacao = new javax.swing.JLabel();
-        txtAlimentacao = new javax.swing.JTextField();
+        txtalimentacao = new javax.swing.JTextField();
         tamanho = new javax.swing.JLabel();
         sexo = new javax.swing.JLabel();
-        txtTamanho = new javax.swing.JComboBox<>();
-        txtSexodino = new javax.swing.JComboBox<>();
-        txtnascdino = new javax.swing.JFormattedTextField();
+        txttamanho = new javax.swing.JComboBox<>();
+        txtsexo = new javax.swing.JComboBox<>();
+        txtnasc = new javax.swing.JFormattedTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Cadastro de Produtos");
@@ -79,9 +121,9 @@ public class CadastroProdutos extends javax.swing.JFrame {
             }
         });
 
-        txtEspecie.addActionListener(new java.awt.event.ActionListener() {
+        txtespecie.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtEspecieActionPerformed(evt);
+                txtespecieActionPerformed(evt);
             }
         });
 
@@ -97,12 +139,12 @@ public class CadastroProdutos extends javax.swing.JFrame {
         sexo.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         sexo.setText("Sexo");
 
-        txtTamanho.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Pequeno", "Medio", "Grande", "Extra Grande" }));
+        txttamanho.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Pequeno", "Medio", "Grande", "Extra Grande" }));
 
-        txtSexodino.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Não definido", "Macho", "Femea" }));
+        txtsexo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Não definido", "Macho", "Femea" }));
 
         try {
-            txtnascdino.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##/##/####")));
+            txtnasc.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##/##/####")));
         } catch (java.text.ParseException ex) {
             ex.printStackTrace();
         }
@@ -120,19 +162,19 @@ public class CadastroProdutos extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(nome)
                     .addComponent(jLabel6)
-                    .addComponent(txtnomeDino)
-                    .addComponent(txtEspecie, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
+                    .addComponent(txtnome)
+                    .addComponent(txtespecie, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
                     .addComponent(voltar, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(nascimento)
-                    .addComponent(txtnascdino))
+                    .addComponent(txtnasc))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(txtSexodino, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(txtTamanho, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(txtsexo, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(txttamanho, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(sexo, javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(Alimentacao, javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(tamanho, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txtAlimentacao, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
+                    .addComponent(txtalimentacao, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
                     .addComponent(cadastrar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(47, 47, 47))
         );
@@ -146,27 +188,27 @@ public class CadastroProdutos extends javax.swing.JFrame {
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(nome)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txtnomeDino, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txtnome, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel6)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txtEspecie, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txtespecie, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(nascimento)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txtnascdino, javax.swing.GroupLayout.DEFAULT_SIZE, 41, Short.MAX_VALUE))
+                        .addComponent(txtnasc, javax.swing.GroupLayout.DEFAULT_SIZE, 41, Short.MAX_VALUE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(Alimentacao)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txtAlimentacao, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txtalimentacao, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(tamanho)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txtTamanho, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txttamanho, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(sexo)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txtSexodino)))
+                        .addComponent(txtsexo)))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(voltar, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -196,21 +238,21 @@ public class CadastroProdutos extends javax.swing.JFrame {
     }//GEN-LAST:event_voltarActionPerformed
 
     private void cadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cadastrarActionPerformed
-            if (txtAlimentacao.getText().equals("")
-                    || txtEspecie.getText().equals("")
-                        || txtSexodino.equals("")
-                            || txtTamanho.equals("")
-                                || txtnascdino.getText().equals("")
-                                    || txtnomeDino.getText().equals("")){
+            if (txtalimentacao.getText().equals("")
+                    || txtespecie.getText().equals("")
+                        || txtsexo.equals("")
+                            || txttamanho.equals("")
+                                || txtnasc.getText().equals("")
+                                    || txtnome.getText().equals("")){
                        JOptionPane.showMessageDialog(rootPane, "Preencha todos os campos");
             }else {
-                JOptionPane.showMessageDialog(rootPane, "Novo Dino Cadastrado com Sucesso!");
+                cadastraProduto();
             }
     }//GEN-LAST:event_cadastrarActionPerformed
 
-    private void txtEspecieActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtEspecieActionPerformed
+    private void txtespecieActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtespecieActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtEspecieActionPerformed
+    }//GEN-LAST:event_txtespecieActionPerformed
 
     /**
      * @param args the command line arguments
@@ -257,12 +299,12 @@ public class CadastroProdutos extends javax.swing.JFrame {
     private javax.swing.JLabel nome;
     private javax.swing.JLabel sexo;
     private javax.swing.JLabel tamanho;
-    private javax.swing.JTextField txtAlimentacao;
-    private javax.swing.JTextField txtEspecie;
-    private javax.swing.JComboBox<String> txtSexodino;
-    private javax.swing.JComboBox<String> txtTamanho;
-    private javax.swing.JFormattedTextField txtnascdino;
-    private javax.swing.JTextField txtnomeDino;
+    private javax.swing.JTextField txtalimentacao;
+    private javax.swing.JTextField txtespecie;
+    private javax.swing.JFormattedTextField txtnasc;
+    private javax.swing.JTextField txtnome;
+    private javax.swing.JComboBox<String> txtsexo;
+    private javax.swing.JComboBox<String> txttamanho;
     private javax.swing.JButton voltar;
     // End of variables declaration//GEN-END:variables
 }

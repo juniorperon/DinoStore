@@ -1,19 +1,20 @@
 
 package lojadino.Classes;
 
-class Cliente {
-    
+public class Cliente {
     //Atributos
+    
+  
     private String nome = "";
     private String cpf = "";
     private String sexo = "";
     private String endereco = "";
     private String cidade = "";
     private String estado = "";
-    private String senha = "";
     private String email = "";
     private String telefone = "";
     private String nascimento = "";
+
 
     public String getNome() {
         return nome;
@@ -61,14 +62,6 @@ class Cliente {
 
     public void setEstado(String estado) {
         this.estado = estado;
-    }
-
-    public String getSenha() {
-        return senha;
-    }
-
-    public void setSenha(String senha) {
-        this.senha = senha;
     }
 
     public String getEmail() {
