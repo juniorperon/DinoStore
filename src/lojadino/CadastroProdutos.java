@@ -20,7 +20,7 @@ public class CadastroProdutos extends javax.swing.JFrame {
     public CadastroProdutos() {
         initComponents();
     }
-        private void cadastraProduto(){
+        private void cadastraProduto(Produtos novoProduto){
         this.conectar.conectaBanco(); 
         
         novoProduto.setNome(txtnome.getText());
@@ -246,7 +246,7 @@ public class CadastroProdutos extends javax.swing.JFrame {
                                     || txtnome.getText().equals("")){
                        JOptionPane.showMessageDialog(rootPane, "Preencha todos os campos");
             }else {
-                cadastraProduto();
+                cadastraProduto(novoProduto);
             }
     }//GEN-LAST:event_cadastrarActionPerformed
 

@@ -22,7 +22,7 @@ public class CadastroClientes extends javax.swing.JFrame {
        
         
     }
-    private void cadastraCliente(){
+    private void cadastraCliente(Cliente novoCliente){
         this.conectar.conectaBanco(); 
         
         novoCliente.setNome(txtNome.getText());
@@ -311,7 +311,7 @@ public class CadastroClientes extends javax.swing.JFrame {
                                     
         }else {
            
-            cadastraCliente();
+            cadastraCliente(novoCliente);
         }
         
     }//GEN-LAST:event_cadastrarActionPerformed

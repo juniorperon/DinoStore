@@ -5,23 +5,61 @@
  */
 package lojadino;
 
-import java.awt.event.KeyListener;
+import Conexão.SQL;
 import javax.swing.JOptionPane;
-import lojadino.Classes.Cliente;
+import lojadino.Classes.Funcionario;
 
 /**
  *
  * @author Paulo
  */
 public class TelaDeAcesso extends javax.swing.JFrame {
-
-    /**
-     * Creates new form TelaDeAcesso
-     */
-    public TelaDeAcesso() {
+    SQL conectar = new SQL(); //acessar os métodos de conexao com o banco
+    Funcionario novoFuncionario = new Funcionario();
+     
+   
+    public TelaDeAcesso() {        
         initComponents();
     }
+       public void Logar(Funcionario novoFuncionario){
+           this.conectar.conectaBanco();
+           String txtlogin = this.txtlogin.getText();
+           String txtsenha = this.txtsenha.getText();
+           
+           try {
+              this.conectar.executarSQL(
+                   "SELECT "
+                    + "cpf_func,"                    
+                    + "senha_func"
+                           
+                 + " FROM"
+                     + " cadastrofuncionario"
+                 + " WHERE"
+                     + " cpf_func = '" + txtlogin + "'"
+                     + "and"
+                     + " senha_func = '" + txtsenha + "'"
+                + ";");
+              while(this.conectar.getResultSet().next()){
+                novoFuncionario.setCpf(this.conectar.getResultSet().getString(1));
+                novoFuncionario.setSenha(this.conectar.getResultSet().getString(2));
+                new TelaPrincipal().setVisible(true);
+                dispose();
+                
+              }
+               
+                if(this.conectar.getResultSet().next()){
+                new TelaPrincipal().setVisible(true);
+                dispose();
+              }else{
+           JOptionPane.showMessageDialog(rootPane, "Usuário ou senha inválidos");
+                }
+          } catch (Exception e) {
+               JOptionPane.showMessageDialog(rootPane, "Usuário ou senha inválidos");
+              
+          }
 
+        }
+     
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -38,11 +76,11 @@ public class TelaDeAcesso extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        txtlogin = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
         txtsenha = new javax.swing.JPasswordField();
         btlogar = new javax.swing.JButton();
         btcadastrar = new javax.swing.JButton();
+        txtlogin = new javax.swing.JFormattedTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Login");
@@ -97,12 +135,6 @@ public class TelaDeAcesso extends javax.swing.JFrame {
         jLabel5.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         jLabel5.setText("Login - CPF");
 
-        txtlogin.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                txtloginKeyPressed(evt);
-            }
-        });
-
         jLabel6.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         jLabel6.setText("Senha");
 
@@ -129,6 +161,12 @@ public class TelaDeAcesso extends javax.swing.JFrame {
             }
         });
 
+        try {
+            txtlogin.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("###.###.###-##")));
+        } catch (java.text.ParseException ex) {
+            ex.printStackTrace();
+        }
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -139,12 +177,11 @@ public class TelaDeAcesso extends javax.swing.JFrame {
                 .addGap(141, 141, 141))
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(134, 134, 134)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(txtsenha, javax.swing.GroupLayout.DEFAULT_SIZE, 386, Short.MAX_VALUE)
-                        .addComponent(txtlogin)
-                        .addComponent(jLabel5)
-                        .addComponent(jLabel6))
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(txtlogin)
+                    .addComponent(txtsenha, javax.swing.GroupLayout.DEFAULT_SIZE, 386, Short.MAX_VALUE)
+                    .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(btlogar, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(71, 71, 71)
@@ -160,8 +197,8 @@ public class TelaDeAcesso extends javax.swing.JFrame {
                 .addGap(45, 45, 45)
                 .addComponent(jLabel5)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txtlogin, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(45, 45, 45)
+                .addComponent(txtlogin, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(42, 42, 42)
                 .addComponent(jLabel6)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(txtsenha, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -192,29 +229,17 @@ public class TelaDeAcesso extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btcadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btcadastrarActionPerformed
-     new CadastroFuncionarios().setVisible(true);  // CARREGAR TELA CADASTRO DE FUNCIONÁRIOS
-     dispose();
+        new CadastroFuncionarios().setVisible(true);  // CARREGAR TELA CADASTRO DE FUNCIONÁRIOS
+
     }//GEN-LAST:event_btcadastrarActionPerformed
 
     private void btlogarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btlogarActionPerformed
-        Object cpf = null;
-   
-              if(txtlogin.getText().equals(cpf) && txtsenha.getText().equals("1234")){
-        new TelaPrincipal().setVisible(true);
-        dispose();
-        }else {
-            JOptionPane.showMessageDialog(rootPane, "Usuário ou Senha inválidos"); // 
-        }
-             
+        Logar(novoFuncionario);
     }//GEN-LAST:event_btlogarActionPerformed
 
     private void btlogarKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_btlogarKeyPressed
         
     }//GEN-LAST:event_btlogarKeyPressed
-
-    private void txtloginKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtloginKeyPressed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtloginKeyPressed
 
     /**
      * @param args the command line arguments
@@ -262,7 +287,7 @@ public class TelaDeAcesso extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JTextField txtlogin;
+    private javax.swing.JFormattedTextField txtlogin;
     private javax.swing.JPasswordField txtsenha;
     // End of variables declaration//GEN-END:variables
 }

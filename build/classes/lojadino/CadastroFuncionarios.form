@@ -139,9 +139,9 @@
                   <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="txtcpf" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                       <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="txtnasc" alignment="3" min="-2" pref="33" max="-2" attributes="0"/>
+                      <Component id="txtcpf" alignment="3" min="-2" pref="33" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
@@ -182,8 +182,6 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="CPF"/>
           </Properties>
-        </Component>
-        <Component class="javax.swing.JFormattedTextField" name="txtcpf">
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel3">
           <Properties>
@@ -288,6 +286,8 @@
               <Format format="(##)#####-####" subtype="-1" type="5"/>
             </Property>
           </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="txtcpf">
         </Component>
       </SubComponents>
     </Container>

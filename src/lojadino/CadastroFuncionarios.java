@@ -19,7 +19,7 @@ public class CadastroFuncionarios extends javax.swing.JFrame {
     public CadastroFuncionarios() {
         initComponents();
     }
-        private void cadastraFuncionario(){
+        private void cadastraFuncionario(Funcionario novoFuncionario){
         this.conectar.conectaBanco(); 
         
         novoFuncionario.setNome(txtnome.getText());
@@ -77,7 +77,6 @@ public class CadastroFuncionarios extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         txtnome = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
-        txtcpf = new javax.swing.JFormattedTextField();
         jLabel3 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         txtendereco = new javax.swing.JTextField();
@@ -91,6 +90,7 @@ public class CadastroFuncionarios extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
         txtnasc = new javax.swing.JFormattedTextField();
         txttelefone = new javax.swing.JFormattedTextField();
+        txtcpf = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Cadastro Funcionário");
@@ -227,9 +227,9 @@ public class CadastroFuncionarios extends javax.swing.JFrame {
                 .addGap(28, 28, 28)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
-                    .addComponent(txtcpf, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel3)
-                    .addComponent(txtnasc, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtnasc, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtcpf, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(27, 27, 27)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
@@ -275,7 +275,7 @@ public class CadastroFuncionarios extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        new TelaDeAcesso().setVisible(true);
+    
     dispose();
                 
     }//GEN-LAST:event_jButton1ActionPerformed
@@ -291,7 +291,7 @@ public class CadastroFuncionarios extends javax.swing.JFrame {
                                     
         }else {
            
-            cadastraFuncionario();
+               cadastraFuncionario(novoFuncionario);
         }
     }//GEN-LAST:event_jButton2ActionPerformed
 
@@ -344,7 +344,7 @@ public class CadastroFuncionarios extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JFormattedTextField txtcpf;
+    private javax.swing.JTextField txtcpf;
     private javax.swing.JTextField txtemail;
     private javax.swing.JTextField txtendereco;
     private javax.swing.JFormattedTextField txtnasc;

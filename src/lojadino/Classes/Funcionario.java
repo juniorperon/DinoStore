@@ -6,6 +6,7 @@
 package lojadino.Classes;
 
 
+
 public class Funcionario {
     
     private String nome = "";
@@ -15,6 +16,7 @@ public class Funcionario {
     private String telefone = "";
     private String senha = "";
     private String endereco = "";
+  
 
     public String getEndereco() {
         return endereco;

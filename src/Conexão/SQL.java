@@ -8,6 +8,7 @@ package Conexão;
 import java.sql.Connection;
 import java.sql.Statement;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
@@ -133,5 +134,9 @@ public class SQL {
             return false;
         }
         return true;
+    }
+
+    public PreparedStatement prepareStatement(String sql) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }
