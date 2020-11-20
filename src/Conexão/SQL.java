@@ -22,7 +22,7 @@ public class SQL {
     //atributos de conexão com o banco
     private Connection conn = null; //variável de conexão com o banco
     private Statement statement; //variável de manipulação do SQL
-    private ResultSet resultSet;
+    public ResultSet resultSet;
     
     private String servidor = "localhost:3306";
     private String nomeDoBanco = "dinostore";
