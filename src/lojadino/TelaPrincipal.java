@@ -6,6 +6,12 @@
 package lojadino;
 
 import Conexão.SQL;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.Date;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import javax.swing.Timer;
 
 
 /**
@@ -40,6 +46,9 @@ public class TelaPrincipal extends javax.swing.JFrame {
         telafundo = new javax.swing.JLabel();
         sistemagerenciamento = new javax.swing.JLabel();
         btexit = new javax.swing.JButton();
+        jPanel2 = new javax.swing.JPanel();
+        jldata = new javax.swing.JLabel();
+        jlhora = new javax.swing.JLabel();
         fundoLogin = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         mncadastrar = new javax.swing.JMenu();
@@ -162,9 +171,15 @@ public class TelaPrincipal extends javax.swing.JFrame {
         getContentPane().add(internalFrame);
         internalFrame.setBounds(10, 60, 840, 380);
 
+        jPanel2.add(jldata);
+        jPanel2.add(jlhora);
+
+        getContentPane().add(jPanel2);
+        jPanel2.setBounds(650, 450, 190, 30);
+
         fundoLogin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/lojadino/Imagens/fundo-login.jpg"))); // NOI18N
         getContentPane().add(fundoLogin);
-        fundoLogin.setBounds(0, 0, 1900, 1267);
+        fundoLogin.setBounds(0, 0, 1880, 1267);
 
         mncadastrar.setBackground(new java.awt.Color(255, 255, 255));
         mncadastrar.setText("Cadastrar");
@@ -288,7 +303,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
         setJMenuBar(jMenuBar1);
 
-        setSize(new java.awt.Dimension(873, 513));
+        setSize(new java.awt.Dimension(877, 564));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -363,7 +378,14 @@ public class TelaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
-  
+       Date dataSistema = new Date();		
+       SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
+       jldata.setText(formato.format(dataSistema));
+       
+       //hora
+       Timer timer = new Timer(1000, new TelaPrincipal.hora());
+       timer.start();
+
     }//GEN-LAST:event_formWindowOpened
 
     public static void main(String args[]) {
@@ -421,6 +443,9 @@ public class TelaPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JMenuItem jMenuItem5;
     private javax.swing.JMenuItem jMenuItem6;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JLabel jldata;
+    private javax.swing.JLabel jlhora;
     private javax.swing.JMenu mdvender;
     private javax.swing.JMenu mncadastrar;
     private javax.swing.JMenu mnferramentas;
@@ -429,4 +454,13 @@ public class TelaPrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel sistemagerenciamento;
     private javax.swing.JLabel telafundo;
     // End of variables declaration//GEN-END:variables
+
+class hora implements ActionListener {
+@Override
+public void actionPerformed(ActionEvent e) {
+Calendar now = Calendar.getInstance();
+jlhora.setText(String.format("%1$tH:%1$tM:%1$tS", now));
+}
+    }
+
 }
