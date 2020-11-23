@@ -5,16 +5,18 @@
  */
 package lojadino;
 
+import Conexão.SQL;
+
+
 /**
  *
  * @author Dell
  */
 public class TelaPrincipal extends javax.swing.JFrame {
 
-    /**
-     * Creates new form TelaPrincipal
-     */
+    SQL conectar = new SQL();
     public TelaPrincipal() {
+  
         initComponents();
     }
 
@@ -59,6 +61,11 @@ public class TelaPrincipal extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Sistema de Gerenciamento");
         setResizable(false);
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowOpened(java.awt.event.WindowEvent evt) {
+                formWindowOpened(evt);
+            }
+        });
         getContentPane().setLayout(null);
 
         internalFrame.setForeground(new java.awt.Color(255, 255, 255));
@@ -200,6 +207,11 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
         jMenuItem2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/lojadino/Imagens/supermarket-cart.png"))); // NOI18N
         jMenuItem2.setText("Vender");
+        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem2ActionPerformed(evt);
+            }
+        });
         mdvender.add(jMenuItem2);
 
         jMenuBar1.add(mdvender);
@@ -216,7 +228,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
         jMenuBar1.add(mnferramentas);
 
-        jMenu1.setText("Pesquisar");
+        jMenu1.setText("Consultar");
 
         jMenuItem4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/lojadino/Imagens/cadastrar.png"))); // NOI18N
         jMenuItem4.setText("Clientes");
@@ -229,6 +241,11 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
         jMenuItem6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/lojadino/Imagens/stegosaurus.png"))); // NOI18N
         jMenuItem6.setText("Produtos");
+        jMenuItem6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem6ActionPerformed(evt);
+            }
+        });
         jMenu1.add(jMenuItem6);
 
         jMenuItem5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/lojadino/Imagens/func.png"))); // NOI18N
@@ -271,7 +288,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
         setJMenuBar(jMenuBar1);
 
-        setSize(new java.awt.Dimension(873, 527));
+        setSize(new java.awt.Dimension(873, 513));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -333,13 +350,22 @@ public class TelaPrincipal extends javax.swing.JFrame {
         new CadastroFuncionarios().setVisible(true);        // TODO add your handling code here:
     }//GEN-LAST:event_jButton4ActionPerformed
 
+    private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
+        new ConsultaDino().setVisible(true);           // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItem6ActionPerformed
+
     private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
-       new ConsultaClientes().setVisible(true); // TODO add your handling code here:
+       new ConsultaClientes().setVisible(true);
     }//GEN-LAST:event_jMenuItem4ActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
+    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+       new TelaPagamento().setVisible(true); // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItem2ActionPerformed
+
+    private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
+  
+    }//GEN-LAST:event_formWindowOpened
+
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -368,6 +394,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new TelaPrincipal().setVisible(true);
+                
             }
         });
     }

@@ -42,21 +42,24 @@ public class TelaDeAcesso extends javax.swing.JFrame {
               while(this.conectar.getResultSet().next()){
                 novoFuncionario.setCpf(this.conectar.getResultSet().getString(1));
                 novoFuncionario.setSenha(this.conectar.getResultSet().getString(2));
-                new TelaPrincipal().setVisible(true);
-                dispose();
-                
+ 
               }
                
-                if(this.conectar.getResultSet().next()){
-                new TelaPrincipal().setVisible(true);
-                dispose();
-              }else{
-           JOptionPane.showMessageDialog(rootPane, "Usuário ou senha inválidos");
-                }
+              
+                
           } catch (Exception e) {
-               JOptionPane.showMessageDialog(rootPane, "Usuário ou senha inválidos");
+               
               
           }
+             if(novoFuncionario.getCpf() == null ? txtlogin != null : !novoFuncionario.getCpf().equals(txtlogin) ){
+                 JOptionPane.showMessageDialog(rootPane, "Usuário ou senha inválidos");
+                
+                
+              }else{
+                 new TelaPrincipal().setVisible(true);        
+                dispose();
+           
+                }
 
         }
      

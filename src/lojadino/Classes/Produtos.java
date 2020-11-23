@@ -1,13 +1,38 @@
 package lojadino.Classes;
 
 public class Produtos {
+    private String codigo ="";
 
+    public String getCodigo() {
+        return codigo;
+    }
+
+    public void setCodigo(String codigo) {
+        this.codigo = codigo;
+    }
     private String nome = "";
     private String especie = "";
     private String alimentacao = "";
-    private String nascimento = "";
+    private String valor = "";
     private String tamanho = "";
     private String sexo = "";
+    private String Qtd_estoque = "";
+
+    public String getAlimentacao() {
+        return alimentacao;
+    }
+
+    public void setAlimentacao(String alimentacao) {
+        this.alimentacao = alimentacao;
+    }
+
+    public String getQtd_estoque() {
+        return Qtd_estoque;
+    }
+
+    public void setQtd_estoque(String Qtd_estoque) {
+        this.Qtd_estoque = Qtd_estoque;
+    }
 
     // GET, SET
     public String getNome() {
@@ -34,12 +59,12 @@ public class Produtos {
         this.alimentacao = Alimentacao;
     }
 
-    public String getNascimento() {
-        return nascimento;
+    public String getValor() {
+        return valor;
     }
 
-    public void setNascimento(String nascimento) {
-        this.nascimento = nascimento;
+    public void setValor(String valor) {
+        this.valor = valor;
     }
 
     public String getTamanho() {
@@ -57,5 +82,14 @@ public class Produtos {
     public void setSexo(String sexo) {
         this.sexo = sexo;
     }
-
+    public void limpaProduto(){
+        Qtd_estoque = "";
+        alimentacao = "";
+        especie = "";
+        nome = "";
+        tamanho = "";
+        sexo = "";
+        valor = "";
+        
+    }
 }
