@@ -250,6 +250,7 @@ public class ConsultaFuncionarios extends javax.swing.JFrame {
         jLabel4.setText("CPF");
 
         jTextField1.setText("   .   .   -  ");
+        jTextField1.setToolTipText("");
 
         jButton1.setText("Pesquisar");
 
