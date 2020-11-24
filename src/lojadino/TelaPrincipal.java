@@ -49,6 +49,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jldata = new javax.swing.JLabel();
         jlhora = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
         fundoLogin = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         mncadastrar = new javax.swing.JMenu();
@@ -169,13 +170,18 @@ public class TelaPrincipal extends javax.swing.JFrame {
         btexit.setBounds(770, 10, 40, 40);
 
         getContentPane().add(internalFrame);
-        internalFrame.setBounds(10, 60, 840, 380);
+        internalFrame.setBounds(10, 20, 840, 380);
 
         jPanel2.add(jldata);
         jPanel2.add(jlhora);
 
         getContentPane().add(jPanel2);
-        jPanel2.setBounds(650, 450, 190, 30);
+        jPanel2.setBounds(660, 410, 190, 30);
+
+        jLabel3.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jLabel3.setText("DinoStore");
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(560, 410, 90, 30);
 
         fundoLogin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/lojadino/Imagens/fundo-login.jpg"))); // NOI18N
         getContentPane().add(fundoLogin);
@@ -303,7 +309,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
         setJMenuBar(jMenuBar1);
 
-        setSize(new java.awt.Dimension(877, 564));
+        setSize(new java.awt.Dimension(877, 510));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -435,6 +441,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
     private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
