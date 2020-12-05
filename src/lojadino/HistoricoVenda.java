@@ -21,7 +21,7 @@ public class HistoricoVenda extends javax.swing.JFrame {
     SQL conectar = new SQL();
     public HistoricoVenda() {
         initComponents();
-        preencherTabela("select * from venda order by nome_cliente");  
+        preencherTabela("select * from venda order by id_venda desc");  
     }
 
     /**
@@ -43,6 +43,11 @@ public class HistoricoVenda extends javax.swing.JFrame {
         setTitle("Historico Venda");
 
         jButton16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/lojadino/Imagens/refresh.png"))); // NOI18N
+        jButton16.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton16ActionPerformed(evt);
+            }
+        });
 
         jLabel19.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         jLabel19.setText("Histórico de venda");
@@ -99,6 +104,10 @@ public class HistoricoVenda extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton16ActionPerformed
+      preencherTabela("select * from venda order by id_venda desc");    // TODO add your handling code here:
+    }//GEN-LAST:event_jButton16ActionPerformed
 
     public void preencherTabela(String Sql){
       ArrayList dados = new ArrayList();

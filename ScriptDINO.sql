@@ -38,9 +38,10 @@ create table cadastroproduto(
 );
 
 create table venda(
+	id_venda int primary key auto_increment,
 	nome_cliente varchar(30),
     nome_prd varchar(30),
-    valor_prd int,
+    valor_prd decimal(6,2),
     pagamento varchar(30),
     data_atual varchar(30)
 
