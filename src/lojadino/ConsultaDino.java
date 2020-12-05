@@ -43,8 +43,7 @@ public final class ConsultaDino extends javax.swing.JFrame {
                     + "especie,"
                     + "tamanho,"
                     + "valor_prd,"
-                    + "sexo_prd,"
-                    + "qtd_estoque"
+                    + "sexo_prd"
                  + " FROM"
                      + " cadastroproduto"
                  + " WHERE"
@@ -60,7 +59,7 @@ public final class ConsultaDino extends javax.swing.JFrame {
                 novoProduto.setTamanho(this.conectar.getResultSet().getString(5));
                 novoProduto.setValor(this.conectar.getResultSet().getString(6));
                 novoProduto.setSexo(this.conectar.getResultSet().getString(7));
-                novoProduto.setQtd_estoque(this.conectar.getResultSet().getString(8));
+               
 
             
              }
@@ -79,7 +78,7 @@ public final class ConsultaDino extends javax.swing.JFrame {
             consultasexo.setSelectedItem(novoProduto.getSexo());
             consultaalimentacao.setSelectedItem((String)novoProduto.getAlimentacao());
             consultatamanho.setSelectedItem((String)novoProduto.getTamanho());
-            consultaestoque.setText(novoProduto.getQtd_estoque());
+            
     
         }   
            if((novoProduto.getNome()== "")){
@@ -94,7 +93,7 @@ public final class ConsultaDino extends javax.swing.JFrame {
             consultatamanho.setSelectedItem("");
             consultavalor1.setText("");
             consultaespecie.setText("");
-            consultaestoque.setText("");
+         
     
     }
      
@@ -148,8 +147,8 @@ public final class ConsultaDino extends javax.swing.JFrame {
                     + "especie = '" + consultaespecie.getText() + "',"
                     + "tamanho = '" + consultatamanho.getSelectedItem()+ "',"                   
                     + "valor_prd = '" + consultavalor1.getText()+ "',"
-                    + "sexo_prd = '" + consultasexo.getSelectedItem()+ "',"
-                    + "qtd_estoque = '" + consultaestoque.getText()+ "'"
+                    + "sexo_prd = '" + consultasexo.getSelectedItem()+ "'"
+                    
                 + " WHERE "
                     + "id_prd = '" + consultaid + "'"
                 + ";"
@@ -193,8 +192,6 @@ public final class ConsultaDino extends javax.swing.JFrame {
         consultaalimentacao = new javax.swing.JComboBox<>();
         consultasexo = new javax.swing.JComboBox<>();
         consultatamanho = new javax.swing.JComboBox<>();
-        jLabel2 = new javax.swing.JLabel();
-        consultaestoque = new javax.swing.JFormattedTextField();
         consultaid = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
         jtprodutos = new javax.swing.JTable();
@@ -269,7 +266,7 @@ public final class ConsultaDino extends javax.swing.JFrame {
         });
 
         try {
-            consultavalor1.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("####,##")));
+            consultavalor1.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("####.##")));
         } catch (java.text.ParseException ex) {
             ex.printStackTrace();
         }
@@ -281,15 +278,6 @@ public final class ConsultaDino extends javax.swing.JFrame {
         consultasexo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Não definido", "Macho", "Femea" }));
 
         consultatamanho.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Pequeno", "Medio", "Grande", "Extra Grande" }));
-
-        jLabel2.setText("Qtd Estoque");
-
-        try {
-            consultaestoque.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("####")));
-        } catch (java.text.ParseException ex) {
-            ex.printStackTrace();
-        }
-        consultaestoque.setOpaque(false);
 
         javax.swing.GroupLayout consultavalorLayout = new javax.swing.GroupLayout(consultavalor);
         consultavalor.setLayout(consultavalorLayout);
@@ -304,36 +292,22 @@ public final class ConsultaDino extends javax.swing.JFrame {
             .addGroup(consultavalorLayout.createSequentialGroup()
                 .addGap(22, 22, 22)
                 .addGroup(consultavalorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(consultaestoque)
-                    .addGroup(consultavalorLayout.createSequentialGroup()
-                        .addGroup(consultavalorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(consultavalorLayout.createSequentialGroup()
-                                .addComponent(jLabel2)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addGroup(consultavalorLayout.createSequentialGroup()
-                                .addGroup(consultavalorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(consultaespecie, javax.swing.GroupLayout.PREFERRED_SIZE, 289, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(consultanome, javax.swing.GroupLayout.PREFERRED_SIZE, 289, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(consultavalor1, javax.swing.GroupLayout.PREFERRED_SIZE, 289, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addGroup(consultavalorLayout.createSequentialGroup()
-                                .addComponent(jLabel6)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addGroup(consultavalorLayout.createSequentialGroup()
-                                .addComponent(jLabel8)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addGroup(consultavalorLayout.createSequentialGroup()
-                                .addComponent(jLabel5)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                        .addGroup(consultavalorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(consultavalorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, consultavalorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(consultasexo, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel7)
-                                    .addComponent(consultaalimentacao, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel10))
-                                .addComponent(consultatamanho, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jLabel13))))
+                    .addComponent(consultaespecie, javax.swing.GroupLayout.PREFERRED_SIZE, 289, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(consultanome, javax.swing.GroupLayout.PREFERRED_SIZE, 289, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(consultavalor1, javax.swing.GroupLayout.PREFERRED_SIZE, 289, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel6)
+                    .addComponent(jLabel8)
+                    .addComponent(jLabel5))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(consultavalorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(consultavalorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, consultavalorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(consultasexo, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel7)
+                            .addComponent(consultaalimentacao, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel10))
+                        .addComponent(consultatamanho, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel13))
                 .addContainerGap())
         );
         consultavalorLayout.setVerticalGroup(
@@ -363,11 +337,7 @@ public final class ConsultaDino extends javax.swing.JFrame {
                 .addGroup(consultavalorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(consultasexo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(consultavalor1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(consultaestoque, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 25, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 33, Short.MAX_VALUE)
                 .addGroup(consultavalorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton3)
                     .addComponent(jButton4))
@@ -465,6 +435,7 @@ public final class ConsultaDino extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -474,20 +445,18 @@ public final class ConsultaDino extends javax.swing.JFrame {
                         .addGap(114, 114, 114)
                         .addComponent(txtatualizar, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 488, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 488, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(txtatualizar, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel9))
@@ -533,7 +502,7 @@ public final class ConsultaDino extends javax.swing.JFrame {
     }//GEN-LAST:event_txtatualizarActionPerformed
  public void preencherTabela(String Sql){
       ArrayList dados = new ArrayList();
-      String [] colunas = new String[] {"ID","Nome","Especie","Valor","Qtd Estoque"}; 
+      String [] colunas = new String[] {"ID","Nome","Especie","Valor"}; 
       conectar.conectaBanco();
       conectar.executarSQL(Sql);
       try {
@@ -542,8 +511,7 @@ public final class ConsultaDino extends javax.swing.JFrame {
               dados.add(new Object[]{conectar.resultSet.getString("id_prd"),
                                     conectar.resultSet.getString("nome_prd"),
                                     conectar.resultSet.getString("especie"),
-                                    conectar.resultSet.getString("valor_prd"),
-                                    conectar.resultSet.getString("qtd_estoque")});
+                                    conectar.resultSet.getString("valor_prd")});
               
           } while (conectar.resultSet.next());
       } catch (SQLException ex) {
@@ -552,24 +520,20 @@ public final class ConsultaDino extends javax.swing.JFrame {
       }
       ModeloTabela modelo = new ModeloTabela(dados, colunas);
       jtprodutos.setModel(modelo);
-      jtprodutos.getColumnModel().getColumn(0).setPreferredWidth(40);
+      jtprodutos.getColumnModel().getColumn(0).setPreferredWidth(43);
       jtprodutos.getColumnModel().getColumn(0).setResizable(false);
       
-      jtprodutos.getColumnModel().getColumn(1).setPreferredWidth(110);
+      jtprodutos.getColumnModel().getColumn(1).setPreferredWidth(146);
       jtprodutos.getColumnModel().getColumn(1).setResizable(false);
       
-      jtprodutos.getColumnModel().getColumn(2).setPreferredWidth(110);
+      jtprodutos.getColumnModel().getColumn(2).setPreferredWidth(146);
       jtprodutos.getColumnModel().getColumn(2).setResizable(false);
       
-      jtprodutos.getColumnModel().getColumn(3).setPreferredWidth(110);
+      jtprodutos.getColumnModel().getColumn(3).setPreferredWidth(146);
       jtprodutos.getColumnModel().getColumn(3).setResizable(false);
       
-      jtprodutos.getColumnModel().getColumn(4).setPreferredWidth(112);
-      jtprodutos.getColumnModel().getColumn(4).setResizable(false);
-      
-      
-  
      
+
       jtprodutos.getTableHeader().setReorderingAllowed(false);
       jtprodutos.setAutoResizeMode(jtprodutos.AUTO_RESIZE_OFF);
       jtprodutos.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
@@ -609,7 +573,6 @@ public final class ConsultaDino extends javax.swing.JFrame {
     private javax.swing.JButton btpesquisar;
     private javax.swing.JComboBox<String> consultaalimentacao;
     private javax.swing.JTextField consultaespecie;
-    private javax.swing.JFormattedTextField consultaestoque;
     private javax.swing.JTextField consultaid;
     private javax.swing.JTextField consultanome;
     private javax.swing.JComboBox<String> consultasexo;
@@ -622,7 +585,6 @@ public final class ConsultaDino extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;

@@ -1,3 +1,6 @@
+drop table cadastroproduto;
+drop table cadastrofuncionario;
+drop table venda;
 create table cadastrofuncionario(
 	nome_func varchar(30),
     cpf_func varchar(30),
@@ -5,7 +8,10 @@ create table cadastrofuncionario(
     email_func varchar(30),
     telefone_func varchar(30),
     senha_func varchar(30),
-    endereco_func varchar(30)
+    endereco_func varchar(30),
+    cidade_func varchar(30),
+    sexo_func varchar(30),
+    estado_func varchar(30)
 
 );
 create table cadastrocliente (
@@ -26,8 +32,16 @@ create table cadastroproduto(
     alimentacao varchar(30),
     especie varchar(30),
     tamanho varchar(30),
-    valor_prd varchar(30),
-    sexo_prd varchar(30),
-    qtd_estoque varchar(30)
+    valor_prd decimal(6,2),
+    sexo_prd varchar(30)
+
+);
+
+create table venda(
+	nome_cliente varchar(30),
+    nome_prd varchar(30),
+    valor_prd int,
+    pagamento varchar(30),
+    data_atual varchar(30)
 
 );

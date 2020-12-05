@@ -16,8 +16,9 @@ public class Produtos {
     private String valor = "";
     private String tamanho = "";
     private String sexo = "";
-    private String Qtd_estoque = "";
-
+    
+    
+    // GET, SET
     public String getAlimentacao() {
         return alimentacao;
     }
@@ -26,15 +27,7 @@ public class Produtos {
         this.alimentacao = alimentacao;
     }
 
-    public String getQtd_estoque() {
-        return Qtd_estoque;
-    }
-
-    public void setQtd_estoque(String Qtd_estoque) {
-        this.Qtd_estoque = Qtd_estoque;
-    }
-
-    // GET, SET
+   
     public String getNome() {
         return nome;
     }
@@ -83,7 +76,7 @@ public class Produtos {
         this.sexo = sexo;
     }
     public void limpaProduto(){
-        Qtd_estoque = "";
+        
         alimentacao = "";
         especie = "";
         nome = "";
