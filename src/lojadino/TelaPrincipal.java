@@ -89,7 +89,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
         jButton4.setBackground(new java.awt.Color(255, 255, 255));
         jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/lojadino/Imagens/func24px.png"))); // NOI18N
-        jButton4.setToolTipText("Dinossauros");
+        jButton4.setToolTipText("Funcionários");
         jButton4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
