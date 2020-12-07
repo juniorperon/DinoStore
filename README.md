@@ -18,16 +18,55 @@ DINOSTORE
  - Tabela
  - Venda
 
-### Telas Frontend
+### Telas Frontend:
 
- - Carregamento
- - Tela de Acesso
- - Cadastro de Cliente
- - Cadastro de Produto
- - Cadastro de Funcionários
- - Consulta de Clientes, Produtos e Funcionários
- - Tela de Pagamento
- - Histórico de Venda
+
+### Tela Carregamento
+
+![Diagrama de Classe](https://github.com/juniorperon/DinoStore/blob/main/carregamento.PNG)
+
+### Tela Acesso
+
+![Diagrama de Classe](https://github.com/juniorperon/DinoStore/blob/main/acessoprint.PNG)
+
+### Tela Menu
+
+![Diagrama de Classe](https://github.com/juniorperon/DinoStore/blob/main/menuprint.PNG)
+
+### Tela Cadastro de Funcionários
+
+![Diagrama de Classe](https://github.com/juniorperon/DinoStore/blob/main/cadastrofuncionarioprint.PNG)
+
+### Tela Cadastro de Clientes
+
+![Diagrama de Classe](https://github.com/juniorperon/DinoStore/blob/main/cadastroclienteprint.PNG)
+
+### Tela Cadastro de Produtos
+
+![Diagrama de Classe](https://github.com/juniorperon/DinoStore/blob/main/cadastroprodutosprint.PNG)
+
+### Tela Consulta de Funcionários
+
+![Diagrama de Classe](https://github.com/juniorperon/DinoStore/blob/main/consultafuncionarioprint.PNG)
+
+### Tela Consulta de Clientes
+
+![Diagrama de Classe](https://github.com/juniorperon/DinoStore/blob/main/consultaclientesprint.PNG)
+
+### Tela Consulta de Produtos
+
+![Diagrama de Classe](https://github.com/juniorperon/DinoStore/blob/main/consultaprodutosprint.PNG)
+
+### Tela Vendas
+
+![Diagrama de Classe](https://github.com/juniorperon/DinoStore/blob/main/detalhevendaprint.PNG)
+
+### Histórico Vendas
+
+![Diagrama de Classe](https://github.com/juniorperon/DinoStore/blob/main/historicovendaprint.PNG)
+
+
+### Diagramas
 
 
 ### Diagrama de Classe
