@@ -3,6 +3,8 @@ Sistema de loja de vendas de dinossauros.
 
 DINOSTORE
 
+![Logo](https://github.com/juniorperon/DinoStore/blob/main/src/lojadino/Imagens/logo_dino.png)
+
 Equipe
 - Ailton Junior
 - Eliandro Freitas
