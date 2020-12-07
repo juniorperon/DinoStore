@@ -5,12 +5,12 @@ DINOSTORE
 
 ![Logo](https://github.com/juniorperon/DinoStore/blob/main/src/lojadino/Imagens/logo_dino.png)
 
-Equipe
+## Equipe
 - Ailton Junior
 - Eliandro Freitas
 - Paulo Henrique
 
-Classes do Projeto
+## Classes do Projeto
 
  - Funcionário
  - Clientes
@@ -18,7 +18,7 @@ Classes do Projeto
  - Tabela
  - Venda
 
-Telas Frontend
+## Telas Frontend
 
  - Carregamento
  - Tela de Acesso
@@ -30,12 +30,12 @@ Telas Frontend
  - Histórico de Venda
 
 
-Diagrama de Classe
+## Diagrama de Classe
 
 ![Diagrama de Classe](https://github.com/juniorperon/DinoStore/blob/main/Diagrama%20de%20Classe%20-%20DinoStore.png)
 
 
-Diagrama Entidade e Relacionamento
+## Diagrama Entidade e Relacionamento
 
 ![Diagrama Entidade e Relacionamento](https://github.com/juniorperon/DinoStore/blob/main/DER%20-%20DinoStore.png)
 
