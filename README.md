@@ -35,5 +35,8 @@ Diagrama de Classe
 ![Diagrama de Classe](https://github.com/juniorperon/DinoStore/blob/main/Diagrama%20de%20Classe%20-%20DinoStore.png)
 
 
+Diagrama Entidade e Relacionamento
+
+![Diagrama Entidade e Relacionamento](https://github.com/juniorperon/DinoStore/blob/main/DER%20-%20DinoStore.png)
 
 
