@@ -29,8 +29,9 @@ Telas Frontend
  - Tela de Pagamento
  - Histórico de Venda
 
+Diagrama de Classe
 
-
+![Diagrama de Classe](https://github.com/juniorperon/DinoStore/blob/main/Diagrama%20de%20Classe%20-%20DinoStore.png)
 
 
 
