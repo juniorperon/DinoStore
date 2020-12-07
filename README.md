@@ -43,7 +43,7 @@ DINOSTORE
 
 ### Tela Cadastro de Produtos
 
-![Diagrama de Classe](https://github.com/juniorperon/DinoStore/blob/main/cadastroprodutosprint.PNG)
+![Diagrama de Classe](https://github.com/juniorperon/DinoStore/blob/main/cadastroprodutoprint.PNG)
 
 ### Tela Consulta de Funcionários
 
